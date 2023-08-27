@@ -1,0 +1,105 @@
+.navbar-list,
+.quicklinks {
+    list-style-type: none
+}
+
+.article,
+.brand-name,
+.title {
+    font-weight: 700
+}
+
+.navbar,
+.navbar-list li,
+.navbar-list li a,
+.title div a {
+    text-decoration: none
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 25px
+}
+
+.navbar,
+.navbar-list {
+    justify-content: space-between;
+    display: flex
+}
+
+.brand-name {
+    font-size: 25px;
+    margin-left: 120px
+}
+
+.navbar {
+    margin-left: -20px
+}
+
+.navbar-list li {
+    margin-right: 40px
+}
+
+.navbar-list li a {
+    color: #000;
+    font-weight: 700
+}
+
+.navbar-list li a:hover,
+.quicklinks li span:hover {
+    color: green;
+    font-size: 18px
+}
+
+.quicklinks {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 80px
+}
+
+.quicklinks li span {
+    margin-left: 18px;
+    color: #000;
+    font-size: 17px
+}
+
+.article {
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    padding: 12px;
+    text-align: center
+}
+
+.article span {
+    color: gold;
+    font-size: 20px
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    position: fixed;
+    margin-top: 20px
+}
+
+.title {
+    position: absolute;
+    top: 200px;
+    right: 150px
+}
+
+.title div {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 100px
+}
+
+.title div a {
+    color: #fff
+}

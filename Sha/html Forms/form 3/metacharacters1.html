@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="get">
+        <!--( )-->
+        <!--it defines union of chars.it is used for buliding expression.-->
+        <input type="password" name="password" pattern="()" size="50ppx" placeholder="()RESULT=expressions">
+        <button>()</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--(?=.*[A-Z])-->
+        <!--IT Refaers to atlest one uppercase latters-->
+        <input type="password" name="password" pattern="(?=.*[A-Z])" size="50ppx" placeholder="(?=.*[A-Z])RESULT=anAnd (one uppercase)">
+        <button>(?=.*[A-Z])</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--(?=.*[a-z])-->
+        <!--IT Refaers to atlest one lowercase latters-->
+        <input type="password" name="password" pattern="(?=.*[a-z])" size="50ppx" placeholder="(?=.*[a-z])RESULT=ANaND (one lowercase)">
+        <button>(?=.*[a-z])</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--(?=.*[0-9])-->
+        <!--IT Refaers to atlest one Numaric-->
+        <input type="password" name="password" pattern="(?=.*[0-9])" size="50ppx" placeholder="(?=.*[0-9])\W RESULT=an4nd (one Numaric)">
+        <button>(?=.*[0-9])</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--(?=.*[!@#$%^&*().,])-->
+        <!--atlest one special chars-->
+        <input type="password" name="password" pattern="(?=.*[!@#$%^&*()])" size="50ppx" placeholder="(?=.*[!@#$%^&*().,]) RESULT=an@nd (one special chars) ">
+        <button>(?=.*[!@#$%^&*()])</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--[!@#$%^&*()]-->
+        <!--only specified specail chars allowed-->
+        <input type="password" name="password" pattern="[!@#$%^21&*().,]" size="50ppx" placeholder="[!@#$%^&*()] RESULT=!,@,#,$...etc (only special chars allowed) ">
+        <button>[!@#$%^&*()]</button>
+    </form>
+    <h3>
+        <center>Quantifires</center>
+    </h3>
+    <form method="get">
+        <!--(4)-->
+        <!--Exactly 4 chars only allowed-->
+        <input type="password" name="password" pattern="(4)" size="50ppx" placeholder="(4) RESULT=4 (excatly only 4 enter  allowed) ">
+        <button>(4)</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--{4,10}-->
+        <!--beetween 4 to 10 chars allowed only (pasword rnage 4 to 10 inputs)-->
+        <input type="password" name="password" pattern="([a-z A-Z 0-9]{4,10})" size="50ppx" placeholder="([a-z A-Z 0-9]{4,10}) RESULT=4to10 b\w allow aplha numaric  ">
+        <button>([a-z A-Z 0-9]{4,10})</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--{4,}-->
+        <!--min 4 max n numbvers...-->
+        <input type="password" name="password" pattern="([a-z A-Z 0-9]{4,})" size="50ppx" placeholder="([a-z A-Z 0-9]{4,}) RESULT=min 4 max n num...">
+        <button>([a-z A-Z 0-9]{4,})</button>
+    </form>
+    <h2>Quetions and Answers</h2>
+    <form method="get">
+        <!--Q)-->
+        <!--write a patterns to validate usr is 4 to 15 chars alpha numaric with _ (slash)-->
+        <input type="password" name="password" pattern="\w{4,15}" size="50ppx" placeholder="\w{4,15} RESULT=alpha numaric with (slash)_">
+        <button>\w{4,15}</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--Q)-->
+        <!--write a patterns to validate mobile number string with +91 and have 10 digits num-->
+        <input type="password" name="password" pattern="\+91\s\d{10}" size="50ppx" placeholder="\+91\s\d{10} RESULT= +91 8970246783">
+        <button>\+91\s\d{10}</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--Q)-->
+        <!--write a patterns to validate bank ifsc code []SBI]-->
+        <input type="password" name="password" pattern="SBIN0\d{6}" size="50px" placeholder=" RESULT=SBIN0{123456}">
+        <button>SBIN0\d{6}</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--Q)-->
+        <!--write a patterns to validate both sbi and hdfc bank ifsc code [SBI and hdfc]-->
+        <input type="password" name="password" pattern="SBIN0\d{6}|HDFC000\d{4}" size="50px" placeholder=" RESULT=SBI0012345|HDFC0002248">
+        <button>SBIN0\d{6}]|[HDFC000\d{4}</button>
+    </form>
+    <form method="get">
+        <!--Q)small w-->
+        <!--write a patterns to validate Userid 4 to 10 chars alpha numaric withatlest one Uppercase letter-->
+        <input type="password" name="password" pattern="(?=.*[A-Z])\w{4,10}" size="50px" placeholder=" RESULT=Anandkumar">
+        <button>(?=.*[A-Z])\w{4,10}</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--Q)small w-->
+        <!--write a patterns to validate Userid with atlest one uppercase letter and numaric with alpha numaric 4 to 10 chars-->
+        <input type="password" name="password" pattern="(?=.*[A-Z])(?=.*[0-9])\w{4,10}" size="50px" placeholder="(?=.*[A-Z])(?=.*[0-9])\w{4,10} RESULT=A9anan">
+        <button>(?=.*[A-Z])(?=.*[0-9])\w{4,10}</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--Q)big W-->
+        <!--write a patterns to validate Userid with atlest one uppercase letter|numaric and Special chars with4 to 10 chars-->
+        <input type="password" name="password" pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*\W)[A-Z a-z 0-9\W]{4,10}" size="50px" placeholder="(?=.*[A-Z])(?=.*[0-9])(?=.*\W)[A-Z a-z 0-9\W]{4,10} RESULT=Aj8@abdc">
+        <button>(?=.*[A-Z])(?=.*[0-9])(?=.*\W)[A-Z a-z 0-9\W]{4,10}</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--Q)-->
+        <!--write a patterns to validate following Phone number format-->
+        <input type="password" name="password" pattern="\+1(\d{3}\)\s\d{3}-\s{4}" size="50px" placeholder="\+1(\d{3}\)\s\d{3}-\s{4} RESULT=+(1) (425) 555-1000">
+        <button>\+1(\d{3}\)\s\d{3}-\s{4}</button>
+    </form>
+    <hr>
+    <form method="get">
+        <!--Q)-->
+        <!--write a patterns to validate following Phone number format-->
+        <input type="password" name="password" pattern="\+\(44)\(\d{2}\)\s\d{4}\s\d{4}" size=" 50px " placeholder="\+\(44)\(\d{2}\)\s\d{4}\s\d{4} RESULT=+(13) (25) 5555-1000 ">
+        <button>\+\(44)\(\d{2}\)\s\d{4}\s\d{4}</button>
+    </form>
+
+
+
+
+</body>
+
+</html>

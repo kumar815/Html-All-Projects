@@ -1,0 +1,99 @@
+Browser Engines 
+Sudhakar Sharma
+•
+6 Mar
+Setup Environment for Building Web Apps
+1. Node JS
+2. VS Code
+3. Extentions    :  Live Server, Icons, IntelliSense
+
+Create a new Web Application
+- package.json        Meta Data
+    > npm  init  -y
+- public
+- src
+                        HTML for Designing Web Page
+- Markup language
+- Presentation
+- HTML is a language used for presentation.
+- HTML presents content in browser.
+- HTML presents content by using "DOM".
+- DOM refers to Document Object Model.
+- It is managed by Browser Engine and Rendering Engines.
+       
+                                    Browser Architecture
+1. UI refers to the content display in browser workspace.
+2. Browser Engine is reponsible for translating HTML.
+3. Rendering Engine is responsible for presenting HTML content.
+4. The popular browser and rendering engines are
+
+                Chrome            :  V8
+                FireFox            :  SpiderMonkey, Gecko
+                Safari                :  Webkit
+                Edge                :  Chakra, Chromium
+
+5. Network is used to track the performance of webpage in browser.
+6. JavaScript Interpreter is responsible for translating client side script [JS].
+7. UI Backend comprises of API related information.
+     [Application Programming Interface]
+8. Data Persistence, is storing data required for browser.
+    [Local Storage, Session, Cookies..]
+
+
+                            HTML Parsing in Browser
+- Tokenization is the process of converting characters into "Tags"  <b>
+- DOM is a hierarchy for presenting elements.
+- Rendering is the process of generating output from Layout.
+- Painting is the process of presentign output.
+
+                                    HTML Elements
+- HTML elements are used for presenting content in browser.
+- Elements in HTML are classified into 5 groups
+
+        1. Normal Elements
+        2. Void Elements
+        3. RC data Elements
+        4. Raw Text Elements
+        5. Foreign Elements
+
+                                    Normal Elements
+- A normal element presents any content directly on callback.
+- It can present without using any additional attributes.
+- A normal element starts presentation but will never stop implicitly.
+- You have to stop explictly by using End token  
+            <b>        Start Token
+            </b>        End Token
+
+                                    Void Elements
+- The terms void in computer programming refers to discard the return.
+- These elements will not return any presentation directly on callback.
+- It can return only specified content and stops implicitly.  
+- It doesn't require  "End Token"
+
+            <img>    
+            <img src="public/pic.jpg">
+
+                                    RC Data Type Elements
+                                    [Rich Content]
+- It allows only plain text content.
+- It will not allow any another element with in context.
+
+            <textarea>
+                Welcome to <b>HTML </b>
+            </textarea>
+
+                                    Raw Text Elements
+- These are elements presented without a token.
+- These elements will not contain any tag.
+- Raw text is used for presentation.
+
+                    &#8377;
+                    &copy;
+                    &lt;
+                    &gt;
+
+                                    Foreign Elements
+- These elements are not native to HTML, but can  be used with HTML
+- They require additional plugin's [library].
+   
+                  Canvas, SVG, MathML

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form-radio</title>
+</head>
+
+<body>
+    <form>
+        <!--radio button-->
+        <!--radio button  are used to exhibit "mutex"[mutual execlusion]-->
+        <!--*radio allos to one are multiple
+        *radio not-allow to deselect the selection
+    *hence you have to use radios with mutex
+*mutex can be defined by specifying same name for call radios in a catagory-->
+        <input type="radio" name="gender" value="male">male
+        <input type="radio" name="gender" vlaue="female">female
+
+        <button>submit</button>
+        <!--you can make any radio selected by defualt by using "checked"-->
+    </form>
+    <form method="get">
+        <input type="radio" name="gender" value="male">male
+        <input type="radio" name="gender" value="female">female
+        <input type="radio" name="gender" value="tans-gender" checked>tans-gender
+        <button>submit</button>
+    </form>
+</body>
+
+</html>

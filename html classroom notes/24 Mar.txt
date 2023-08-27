@@ -1,0 +1,271 @@
+Inter Document Links
+Sudhakar Sharma
+•
+24 Mar
+a) Intra Document Links
+        a) Set ID for reference element
+                <h2 id="topic">
+        b) Go to reference id by using <a href="#topic">
+
+FAQ: How to highlight any intra document link target if there is no enough space for scrolling page?
+Ans : By using CSS class ":target"
+
+Syntax:
+         .card {
+
+         }
+        .card:target {
+
+        }
+
+Note: Every transformation for element is applied with in a fraction of time interval.
+        You can control the timing for transformation by using CSS attribute "transition".
+
+        .card:target {
+              font-size : 30px;        
+              height : 300px;
+              transition: 2s;
+         }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intra links</title>
+    <style>
+        .card {
+            width: 250px;
+            border:1px solid black;
+            box-shadow: 2px 2px 2px gray;
+            padding: 5px;
+            margin: 20px;
+            height: 200px;
+        }
+        .card:target {
+            background-color: black;
+            color:white;
+            font-size: 30px;
+            height: 300px;
+            transition: 1s;
+        }
+        .container {
+            display: flex;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+        }
+        li {
+            margin-right: 100px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#html">HTML</a></li>
+        <li><a href="#css">CSS</a></li>
+        <li><a href="#js">JavaScript</a></li>
+    </ul>
+    <div class="container">
+        <div class="card" id="html">
+            <h2>HTML</h2>
+            <p>It is a markup language.</p>
+        </div>
+        <div class="card" id="css">
+            <h2>CSS</h2>
+            <p>It defines styles for HTML.</p>
+        </div>
+        <div class="card" id="js">
+            <h2>JavaScript</h2>
+            <p>It is a language to manipulate DOM.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+                                Inter Document Links
+- It refers to a hyperlink that can navigate the user to any file, url or application.
+- It uses navigation from one page to another.
+- Navigate to File
+        <a href="images/aws.jpg"> Poster </a>
+        <a href="docs/html.pdf"> Tutorial </a>
+        <a href="template.html"> Template </a>
+ 
+   Note: Every linked document can't open in browser.
+          It suitable plugin's are not available then document will download, it can't open.
+
+  FAQ: How to download any file from a link?
+  Ans : By using <a> attribute  "download".
+
+
+         <a href="images/aws.jpg"  download="fileName|optional">  
+
+- Navigate to any application
+
+            Email                href="name@gmail.com"
+            Skype                href="skype:name@outlook.com"
+            Phone                href="tel:9888211223"
+
+        <a href="hr@nareshit.in"> hr@nareshit.in </a>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter Document Links</title>
+</head>
+<body>
+    <h2>Favorite Links</h2>
+    <ol>
+        <li><a href="./shopper-template.html">Shopper Template</a></li>
+        <li><a href="http://www.amazon.in">Amazon Shopping</a></li>
+        <li><a href="./images/aws.jpg" download="Amazon">AWS Training Poster</a></li>
+        <li><a href="./docs/html.pdf">HTML Tutorial</a></li>
+        <li><a href="./docs/VirtualDOM.pptx">Browser DOM PPT</a></li>
+        <li>For more queries mail us <a href="hr@nareshit.in">hr@nareshit.in</a></li>
+        <li>Skype Us : <a href="skype:hr_nareshit@outlook.com">hr@nareshit</a> </li>
+        <li>Call Us : <a href="tel:040-4495968">040-4495968</a></li>
+    </ol>
+</body>
+</html>
+
+    FAQ: How to open linked document in a new tab?
+    Ans : By using "target=_blank"  attribute for <a>
+
+          <a href="template.html"  target="_blank">  Template </a>
+
+    FAQ: How to open linked document in new window?
+    Ans:  By using JavaScript:window.open()  method.
+
+           <a href="javascript:window.open('filePath', 'Title', 'features')">  File </a>
+
+Ex:
+<a href="javascript:window.open('./images/aws.jpg','AWS','width=400 height=300')">AWS Training Poster</a>
+
+    FAQ: How to open linked document in same window along with existing content?
+    Ans :  By using <iframe> in HTML 5
+
+Syntax:
+            <a href="images/aws.jpg"  target="frameBody">  Poster </a>
+
+             <iframe  name="frameBody" width="100%" height="300"> </iframe>
+
+Ex: Change YouTube view link to embed link
+
+        https://www.youtube.com/watch?v=LWynsfHNyiI        => view Link
+
+        https://www.youtube.com/embed/LWynsfHNyiI            =>  embed Link
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter Document Links</title>
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        iframe {
+            border:none;
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Favorite Links</h2>
+    <section>
+        <nav>
+            <ol>
+                <li><a href="./shopper-template.html" target="_blank">Shopper Template</a></li>
+                <li><a href="http://www.amazon.in">Amazon Shopping</a></li>
+                <li><a href="javascript:window.open('./images/aws.jpg','AWS','width=400 height=300')">AWS Training Poster</a></li>
+                <li><a href="./images/ui.jpg" target="frameBody">UI Web Development</a></li>
+                <li><a href="./docs/html.pdf">HTML Tutorial</a></li>
+                <li><a href="./docs/VirtualDOM.pptx">Browser DOM PPT</a></li>
+                <li>For more queries mail us <a href="hr@nareshit.in">hr@nareshit.in</a></li>
+                <li>Skype Us : <a href="skype:hr_nareshit@outlook.com">hr@nareshit</a> </li>
+                <li>Call Us : <a href="tel:040-4495968">040-4495968</a></li>
+                <li><a href="https://www.youtube.com/embed/LWynsfHNyiI&quot; target="frameBody">Core Java Video</a></li>
+                <li><a href="https://www.youtube.com/embed/62HuiN8N4yE&quot; target="frameBody">Java API Workshop</a></li>
+            </ol>
+        </nav>
+        <main>
+            <iframe name="frameBody"></iframe>
+        </main>
+    </section>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+        }
+        nav div {
+            width: 50px;
+            height: 50px;
+            padding: 2px;
+            margin-bottom: 20px;
+            border:2px solid blue;
+        }
+        iframe {
+            border:none;
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <nav>
+            <div>
+                <a href="./images/m1.jpg" target="frameBody">
+                    <img width="50" height="50" src="./images/m1.jpg">
+                </a>
+            </div>
+            <div>
+                <a href="./images/m2.jpg" target="frameBody">
+                    <img width="50" height="50" src="./images/m2.jpg">
+                </a>
+            </div>
+            <div>
+                <a href="./images/m3.jpg" target="frameBody">
+                    <img width="50" height="50" src="./images/m3.jpg">
+                </a>
+            </div>
+            <div>
+                <a href="./images/m4.jpg" target="frameBody">
+                    <img width="50" height="50" src="./images/m4.jpg">
+                </a>
+            </div>
+            <div>
+                <a href="./images/m5.jpg" target="frameBody">
+                    <img width="50" height="50" src="./images/m5.jpg">
+                </a>
+            </div>
+        </nav>
+        <main>
+            <iframe name="frameBody" src="./images/m1.jpg"></iframe>
+        </main>
+    </section>
+</body>
+</html>

@@ -1,0 +1,223 @@
+Semantics for Layout Design, Bootstrap Icons
+Sudhakar Sharma
+•
+10 Mar
+Semantics used for Designing Layout
+
+1. header :  It comprises of information to display at the top margin of page.
+               It usually contains navigation, brand name and quick links.
+   
+Note: Icons can be accessed and used from 3rd party libraries
+            a) Font Awesome
+            b) Bootstrap Icons
+
+Setup Icons for your project: [Bootstrap]
+1. Open your project terminal
+
+2. type the following command
+
+            > npm   install   bootstrap-icons   --save
+            > npm   i   bootstrap-icons --s
+
+3. A new folder is created by name "node_modules"
+
+4. Bootstrap icons are present in a CSS file
+
+        node_modules/bootstrap-icons/font/bootstrap-icons.css
+
+5. If you want icons in any page then you have to link the CSS.
+
+ <head>
+    <link  rel="stylesheet"  href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+ </head>
+
+6. Icons are stored under the reference of  CSS class names
+
+                        class="bi  bi-house"
+                        class="bi  bi-facebook"
+                        class="bi  bi-globe"
+           
+                    www.getbootstrap.com => icons
+
+Syntax:
+            <span  class="bi bi-house-door"> </span>
+            <div  class="bi bi-house-door"> </div>
+
+           
+            https://themes.getbootstrap.com/product/shopper/
+
+Styles Used for Header:
+
+    display:flex                    : It can keep content flexible in container [side-by-side]
+    justify-content                : space-between, space-around, space-evenly
+     font-size                        : text size in pixels
+     font-weight                    : bold
+     font-style                        : italics
+     font-family                        : Arial, Jokerman, Times New Roman
+     color                            : Text color
+    background-color            : Background Color
+    padding                        : space around content
+    margin                        : It sets margin all directions
+    margin-left
+    margin-right
+    margin-top
+    margin-bottom
+    text-align                        : left, center, right , justify
+
+2. Article            : It is a container that comprises of latest offers and trends in your
+                      website.
+
+3. Nav                : It is used for defining navigation area in a page.
+
+4. Div                : It refers to a division, which is a container to keep content in block
+                      style. It represents a section of content.
+
+5. Span            : It refers to relative content in a section separated from each other.
+
+6. Footer            : It defines the content to display at the bottom margin of page.
+                      It usually contains quick links, copyright, contact details etc..
+
+7. Address        : It makes your contact details SEO friendly
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopper Template</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+           display: flex;
+           justify-content: space-between;
+           font-size: 25px;
+           font-family: Arial;
+           background-color:crimson;
+           color:white;
+           padding: 20px;
+        }
+        .brand-title {
+            font-size: 35px;
+            font-weight: bold;
+        }
+        nav span {
+            margin-right: 20px;
+        }
+        .quick-links span {
+            margin-right: 10px;
+        }
+        article {
+            background-color: black;
+            color:white;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+            margin-top: 15px;
+        }
+        article span {
+            color:gold;
+        }
+        section {
+            height: 200px;
+        }
+        footer {
+            background-color: black;
+            color:white;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr ;
+            font-family: Arial;
+            height: 200px;
+        }
+        .brand-title+div {
+            margin-top: 15px;
+        }
+        .brand-title+div span {
+            margin-right: 10px;
+        }
+        .footer-title {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .footer-title~div {
+            margin-bottom: 15px;
+            color:gray;
+        }
+        address div {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+     <header>
+        <div>
+            <span class="brand-title">Shopper.</span>
+        </div>
+        <div>
+            <nav>
+                <span>Home</span>
+                <span>Catalog</span>
+                <span>Pages</span>
+                <span>Blog</span>
+                <span>Shop</span>
+                <span>Docs</span>
+            </nav>
+        </div>
+        <div class="quick-links">
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+            <span class="bi bi-cart"></span>
+        </div>
+     </header>
+     <article>
+        <span class="bi bi-lightning-fill"></span> HAPPY HOLIDAY DEALS ON EVERYTHING <span class="bi bi-lightning-fill"></span>
+     </article>
+      <section>
+
+      </section>
+     <footer>
+         <div>
+            <div class="brand-title">Shopper.</div>
+            <div>
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-youtube"></span>
+                <span class="bi bi-twitter"></span>
+                <span class="bi bi-instagram"></span>
+                <span class="bi bi-linkedin"></span>
+            </div>
+         </div>
+         <div>
+            <div class="footer-title">SUPPORT</div>
+            <div>Contact Us</div>
+            <div>FAQs</div>
+            <div>Size Guide</div>
+            <div>Shipping & Returns</div>
+         </div>
+         <div>
+            <div class="footer-title">SHOP</div>
+            <div>Men's Shopping</div>
+            <div>Women's Shopping</div>
+            <div>Kids' Shopping</div>
+            <div>Discounts</div>
+         </div>
+         <div>
+            <div class="footer-title">COMPANY</div>
+            <div>Our Story</div>
+            <div>Careers</div>
+            <div>Terms & Conditions</div>
+            <div>Privacy & Cookie policy</div>
+         </div>
+         <div>
+            <div class="footer-title">CONTACT</div>
+            <address>
+                <div>1-202-555-0105</div>
+                <div>1-202-555-0106</div>
+                <div>help@shopper.com</div>
+            </address>
+         </div>
+     </footer>
+</body>
+</html>

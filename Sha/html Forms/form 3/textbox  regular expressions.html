@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+    <style>
+        body {
+            margin-left: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get" action="page.jsp">
+        <!--readonly-->
+        <!--this is only reed,submit to the value-->
+        <div class="readonly"> <input type="text" placeholder="readonly" readonly><button>submit</button></div>
+        <br>
+        <!--disabled-->
+        <!--this is not allowd modify and submit.only wahting input box-->
+        <input type="text" placeholder="disabled" disabled><button>submit</button>
+        <br><br>
+        <!--autofocus-->
+        <!--it is set foucs automatic on page lode-->
+        <input type="text" placeholder="autofocus" autofocus><button>submit</button>
+        <br><br>
+        <!--size-->
+        <!--it defines the width for textbox.default size is "2o"-->
+        <input type="text" size="4s0" placeholder="size"><button>size</button>
+        <br><br>
+        <!--Minlength-->
+        <!--it va;lidates the lower bound value of textbox-->
+        <input type="text" minlength="4" placeholder="only min 4 length char add  "><button>--Minlength--</button>
+        <br><br>
+        <!--Maxlength-->
+        <!--it retricks the maxium number of chars-->
+        <input type="text" maxlength="10" placeholder="restict max 10 length char add  "><button>--Maxlangth--</button>
+        <br><br>
+        <!--(both add)
+            Minlength and maxlength use-->
+        <!--it min 4 chars and restric to the 10max chars-->
+        <input type="text" minlength="4" maxlength="10" placeholder="min 4 above max 10 restrict "><button>--both--</button>
+        <br><br>
+        <!--required-->
+        <!--it ensures for that the textbox is not empty it is used for mandatort fields-->
+        <input type="text" placeholder="--required-- " required><button>--required--</button><br>
+        <input type="text" placeholder="--required-- "><button>--required--</button>
+        <br><br>
+        <!--List-->
+        <!--it is used to attach a data list to textbox-->
+        <!--datalist:- element is used to configure alist with
+        datalist used as "auto complete" text for input value-->
+        <!--option:- as value-->
+        <input type="text" list="terms">
+        <datalist id="terms">
+            <option>Eletronics</option>
+            <option>Sumsung</option>
+            <option>Lg</option>
+            </datalist>
+        <br><br>
+        <input type="text" list="books">
+        <datalist id="books">
+            <option>make idea</option>
+            <option>Soars</option>
+            <option>mesial man</option>
+            </datalist>
+        <button>submit</button>
+
+    </form>
+</body>
+
+
+</html>

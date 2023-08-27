@@ -1,0 +1,275 @@
+Images in HTML
+Sudhakar Sharma
+•
+21 Mar
+Web Supports
+        APNG, PNG, JPEG, GIF, TIFF, BMP, ICO, SVG, WebP
+
+    Image Type                            Purpose
+    -----------------------------------------------------------------------------------------------------
+    PNG, APNG                            HD Images
+                                            More Pixels
+                                            More space in memory
+                                            If you are providing images for download then
+                                            always try to use PNG, APNG.
+
+     JPEG                                    HD Images
+                                            Less Pixels when compared to PNG
+                                            Compressed Images
+                                            Less memory space
+                                            Good for on screen presentation.
+
+     GIF                                    Not a HD Format
+                                            Less Pixels and Colors [256 colors]
+                                            They are animated images.
+                                            Memory is not reduced
+                                            Good for logo, buttons, icons, bullets etc..
+
+     TIFF                                    Sliced Image Format
+                                            Used for Scanned Documents
+
+     BMP                                    Binary Image Format
+                                            Image in bytes
+                                            Good for storing image in database.
+                                            [Bitmap]
+
+     ICO                                    It is good for icons
+
+   
+     SVG                                    Scalar Vector Graphics
+                                            It is XML format Images
+                                            Extensible Markup Language
+                                            It is not pixel based.
+                                            It will keep the quality even after zoom.
+                                           
+     Webp                                    Web Picture Format
+                                            Embedded Image in page
+                                            You can't separate image from page.
+
+
+    FAQ's:
+        1. Which image is XML based?
+        A. SVG
+       
+        2. Which image is not Pixel Based?
+        A. SVG
+
+        3. Which image is used for diagrams?
+        A. SVG, Canvas
+
+        4. Which image is embedded with page?
+        A. Webp
+
+        5. Which Image is animated?
+        A.  APNG, GIF
+
+        6. Which image is in binary format?
+        A.  BMP
+
+        7. Which image is compressed format?
+        A. JPEG
+
+
+                                HTML Image Element
+        - If you want image SEO friendly then keep image with caption by using
+                <figure>
+                <figcaption>
+                <img>
+        - If you want image to embed into page without SEO then
+                <img>
+
+Syntax: SEO friendly
+
+        <figure>
+            <img>
+            <figcaption> caption </figcaption>
+        </figure>
+
+Ex:
+          <figure>
+                <img src="images/realme.jpg" width="150">
+                <figcaption>Realme C35</figcaption>
+            </figure>
+
+                                    Image Attributes
+
+    1. src                    : It specifies the name and path of image.
+    2. alt                    : It defines the alternative text to display when image fails to                                       load.
+
+    Syntax:
+        <img src="images/realme.jpg"  alt="realme c35 - preview N/A">
+
+    3. title                    : It specifies the title to display when mouse is over image.
+                               [screen tips - tooltips]
+
+    Syntax:
+        <img src="images/realme.jpg"  title="20% OFF on realme mobiles">
+
+   
+    4. width & height        : It defines width and height for image in pixels or percentage.
+                              Image size in % will be fluid image size.
+
+    Syntax:
+        <img src="images/realme.jpg"  width="50%" height="300px">
+
+    5.  border                : It sets border for image by specified pixels.
+
+
+    Syntax:
+        <img src="images/realme.jpg  width="200" height="300" border="2">
+
+    6. align                : It can align image only left or right.
+                              Align can wrap image with regard to text.
+
+    Syntax:
+        <img src="images/realme.jpg  align="left">
+
+    7. hspace & vspace    :  Horizontal and vertical padding for image.
+
+    Syntax:
+        <img src="images/realme.jpg  align="right" hspace="20" vspace="10">
+
+Ex: Designing Cards with Images with CSS Flex and Flex Wrap
+       
+                .container {
+                     display:flex;
+                     flex-wrap: wrap;
+                 }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .card {
+            width: 200px;
+            height: 300px;
+            margin: 20px;
+         
+            box-shadow: 2px 2px 2px gray;
+        }
+        .card-body {
+            text-align: center;
+            margin-top: 30px;
+            font-family: Arial;
+        }
+        .card-title {
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+        .card-rating {
+            color:goldenrod;
+            margin-bottom: 10px;
+        }
+        .card-subtitle {
+            font-size: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card-footer {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            font-size: 20px;
+            background-color: purple;
+            color:white;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="container">
+     <div class="card">
+         <div class="card-header">
+            <img src="images/ui.jpg" width="100%">
+         </div>
+         <div class="card-body">
+            <div class="card-title">UI Online Training</div>
+            <div class="card-rating">
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+            </div>
+            <div class="card-subtitle">
+                View Course
+            </div>
+         </div>
+         <div class="card-footer">
+                <span class="bi bi-heart-fill"></span>
+                <span class="bi bi-share-fill"></span>
+                <span class="bi bi-facebook"></span>
+         </div>
+     </div>
+
+     <div class="card">
+        <div class="card-header">
+           <img src="images/aws.jpg" width="100%">
+        </div>
+        <div class="card-body">
+           <div class="card-title">AWS Online Training</div>
+           <div class="card-rating">
+               <span class="bi bi-star-fill"></span>
+               <span class="bi bi-star-fill"></span>
+               <span class="bi bi-star-fill"></span>
+               <span class="bi bi-star-fill"></span>
+               <span class="bi bi-star-fill"></span>
+           </div>
+           <div class="card-subtitle">
+               View Course
+           </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+           <img src="images/dev.jpg" width="100%">
+        </div>
+        <div class="card-body">
+           <div class="card-title">DevOps Online Training</div>
+           <div class="card-rating">
+               <span class="bi bi-star-fill"></span>
+               <span class="bi bi-star-fill"></span>
+               <span class="bi bi-star-fill"></span>
+               <span class="bi bi-star-fill"></span>
+               <span class="bi bi-star-fill"></span>
+           </div>
+           <div class="card-subtitle">
+               View Course
+           </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+           <img src="images/ds.jpg" width="100%">
+        </div>
+        <div class="card-body">
+           <div class="card-title">Data Science Online Training</div>
+           <div class="card-rating">
+               <span class="bi bi-star-fill"></span>
+               <span class="bi bi-star-fill"></span>
+               <span class="bi bi-star-fill"></span>
+               <span class="bi bi-star-fill"></span>
+               <span class="bi bi-star-fill"></span>
+           </div>
+           <div class="card-subtitle">
+               View Course
+           </div>
+        </div>
+    </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+HTML Page Structure
+Sudhakar Sharma
+•
+7 Mar
+Summary
+- Browser Architecture
+        a) UI
+        b) Browser Engine
+        c) Rendering Engine
+        d) JavaScript Interpreter
+        e) UI Backend
+        f)  Network
+        g) Data Persistance
+- HTML Parsing
+    Markup => Bytes => Chars => Tokens => Elements Node => DOM => Layout => Render => Painting
+- HTML Elements
+    1. Normal
+    2. Void
+    3. RC Data
+    4. Raw Text
+    5. Foreign
+
+
+
+
+                                    HTML Page Structure
+1. Every static page must have extention ".html" or "htm".
+                   
+FAQ: What is difference between ".html" & ".htm" ?
+Ans : There is no technical difference. Both are same.
+        It is recommended to defined ".html"
+        The extention ".htm" is defined when exported for other softwares.
+
+2. Every HTML page must start with "Document Declaration", It is not required if your are designing page in HTML 4 version.
+
+            <!DOCTYPE html>        Version HTML5
+
+3. Every HTML document have 2 sections at high level.
+
+            a) Document Document Scope
+            b) Lexical Scope
+
+4. Document Scope is defined by using  
+            <html>
+
+            </html>
+
+5. Lexical scope is outside document section.
+
+     Note:  Content is lexical scope will load faster when compared to document scope.
+
+
+6. Every document scope must configure an attribute "lang"  [ language ]
+    Language is use to represent the content region type.
+
+                <html  lang="en-in | en-us">
+                </html>
+
+7. Every document scope comprises of 2 sections
+
+            a) Head        <head> </head>
+            b) Body        <body> </body>
+
+8. Head section comprises of content which is intended to load into browser memory.
+
+9. Body section comprises of content which is intended to load into browser workspace.
+
+10. The contents to keep in head section of HTML page are
+
+            a) title
+            b) link
+            c) meta
+            d) script
+            e) style
+
+                                            title
+   -  It defines the title to display in browser title bar.
+   -  It is also used in bookmarking page. [Favorites]
+
+        <html lang="en-in">
+        <head>
+            <title> Amazon | India </title>
+        </head>
+
+                                            link
+    - It is used to link any external document to page like "stylesheet" or "shortcut icon".
+   
+Ex: Linking Favorite Icon
+
+1. Add a new file into public folder by name  "favicon.ico"
+
+2. Right click and "Reveal in Explorer"
+
+3. Right click and open with "Ms-Paint"
+
+4. Set Image size  "Ctrl + E"   [Ms-Paint]   to  "32 x 32 pixels"
+
+5. Draw image and save
+
+6. Link to your HTML page
+
+    <head>
+        <link rel="shortcut icon"  href="public/favicon.ico">
+    </head>
+
+
+
+Ex:
+<!DOCTYPE html>
+<html  lang="en-in">
+    <head>
+        <title>Amazon | Shopping</title>
+        <link rel="shortcut icon" href="public/favicon.ico">
+    </head>
+</html>

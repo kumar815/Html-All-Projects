@@ -1,0 +1,222 @@
+Basic Elements 
+Sudhakar Sharma
+•
+14 Mar
+HTML Colors
+- Color Name
+- Color Shade Name
+- Hexa Decimal Code
+
+CSS Colors
+- rgb()                    rgb(red, green, blue)                    = 0 to 255
+                        rgb(255,0,0)                                = red
+
+- rgba()                rgba(red, green, blue, alpha)            = alpha from 0 to 1
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-size: cover;
+        }
+        .shade {
+            background-color: rgba(0,0,0,0.5);
+            width: 120%;
+            height: 768px;
+            margin : -20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            text-align: center;
+        }
+        .title {
+            font-size: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body background="./images/netflixbanner.jfif">
+   <div class="shade">
+        <main>
+            <div class="title">Unlimited Movies & TV Shows</div>
+            <div class="sub-title">Watch anywhere and anytime</div>
+        </main>
+   </div>
+</body>
+</html>
+
+                            HTML Body Semantics and Literals                                    
+- HTML can't present the content exactly as defined in editor.
+- You have to use various semantics and literals for presentation of body content.
+
+1. Line Breaks                    <br>
+
+FAQ: What is difference between <br> & <br /> ?
+Ans :  There is no <br /> in HTML. Browser knowns only <br>.
+        Developer can use <br /> to tell the editor that it is a void element. It is a self
+        ending element.
+
+Note: Don't use lot of line breaks manually in a page. Always try to use <div> and <span>.
+
+        Don't use <br> for space between lines. Always use CSS attributes.
+
+2. Blank Space                &nbsp;    [Non-Breakable space]
+
+        Note: HTML allows one char space between words and characters.
+               Additional spaces are trimmed. You can manually define space with
+               CSS attributes.
+                             letter-spacing
+                             word-spacing
+Syntax:
+    H &nbsp; &nbsp;T M L                Not Good - Bad coding
+
+Syntax:
+    <div class="title"> HTML </div>
+
+    .title {
+           letter-spacing: 20px ;
+     }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics</title>
+    <style>
+        .title {
+            letter-spacing: 20px;
+        }
+        .sub-title {
+            word-spacing: 20px;
+        }
+    </style>
+</head>
+<body>
+     <div class="title">HTML</div>
+     <div class="sub-title"> It is a markup language.</div>
+</body>
+</html>
+
+3. Preformatted Text            <pre>    It keeps the format of content and presents
+                                     exactly as defined in editor.
+
+4. Code Snippet                    <code>  It keeps you code content in page and make it
+                                     SEO friendly.
+
+Syntax:
+    <pre>
+        <code>
+              .... your code ...
+        </code>
+    </pre>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics</title>
+    <style>
+       pre {
+         font-family: Arial;
+         margin-left: -30px;
+       }
+    </style>
+</head>
+<body>
+    <div>Sample C Program</div>
+    <div>
+     
+         <code>
+           <pre>
+            #include &lt;stdio.h&gt;
+            main()
+            {
+                printf("Welcome to HTML");
+            }
+           </pre>
+         </code>
+       
+    </div>
+</body>
+</html>
+
+5. sample text                    <samp>    Use for coding comments in code blocks.
+
+                                    <!--  comments  -->     HTML comments
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics</title>
+    <style>
+       pre {
+         font-family: Arial;
+         margin-left: -30px;
+       }
+       samp {
+         color:green;
+       }
+       code {
+          color:red;
+       }
+    </style>
+</head>
+<body>
+    <!-- Welcome to HTML -->
+    <div>Sample C Program</div>
+    <div>
+         <code>
+            <samp>Program to print Welcome.</samp>
+           <pre>
+            #include &lt;stdio.h&gt;
+            main()
+            {
+                printf("Welcome to HTML");
+            }
+           </pre>
+         </code>
+       
+    </div>
+</body>
+</html>
+
+6. variables                    <var>  It is used to configure variables in program.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics</title>
+    <style>
+       var {
+         color:gray;
+       }
+    </style>
+</head>
+<body>
+     var <var>x</var> = 10; <br>
+     int <var>y</var> = 20; <br>
+     var <var>z</var> = <var>x</var> + <var>y</var>;
+</body>
+</html>

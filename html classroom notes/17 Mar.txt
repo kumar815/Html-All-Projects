@@ -1,0 +1,333 @@
+Font Style and Effects
+Sudhakar Sharma
+•
+17 Mar
+Unordered List            
+- <ul>
+- <li>
+
+Attribute
+- type            : It defines the symbol type  circle, disc, square.
+
+Syntax:
+    <ul type="disc | circle | square">
+    </ul>
+
+FAQ: How to set custom bullet symbol?
+Ans : By using CSS attribute  "list-style-image"
+
+Syntax:
+        ul {
+            list-style-image : url("images/bullet.gif");
+        }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics</title>
+    <style>
+        ul {
+            list-style-image: url("images/bullet.gif");
+            font-size: 34px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+</body>
+</html>
+
+Ex: Nested List
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <ol>
+        <li>HTML
+            <ul type="square">
+                <li>Normal Elements
+                    <ol type="a">
+                        <li>Bold</li>
+                        <li>Italics</li>
+                    </ol>
+                </li>
+                <li>Void Elements</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>
+                                 Text Formatting in HTML
+
+1. Font        : The <font> element  defines a face, size and color.
+
+Syntax:
+        <font  face="Arial"  size="1 to 7"  color="name|shade|code">
+            .... your text...
+        </font>
+
+Ex:
+    <font color="red" size="5" face="Freestyle Script">B</font>old
+
+FAQ: What are web-safe fonts?
+Ans:  These are the fonts used for transformation, if any special font is not available.
+        The web-safe fonts are:
+            a) sans-serif
+            b) serif
+            c) monospace
+
+Note: Don't use <font> element to change the char appearence in modern web, always try using CSS.
+
+2. Font  Styles
+
+    <b>            Bold                        Design
+    <strong>        Bold                        Review
+    <i>                Italics                        Design
+    <em>            Italics [Emphasized]        Review
+
+Syntax:
+            <b> your text </b>
+            <i>  your text </i>
+
+FAQ:  What is difference between <b> and <strong> ?
+Ans :  <b> is used while designing
+        <strong> is use while reviewing
+
+Note:  Strong is used only for development not for production [Go-Live].
+
+3. Font Effects
+
+        <u>            Underline            Design
+        <ins>            Inserted             Review
+        <strike>        Strikeout            Design
+        <del>            Deleted            Review
+        <sup>            Super Script        Raised from baseline
+        <sub>            Sub Script        Lowered from baseline
+
+Syntax:
+         <strike> &#8377;  43999/- </strike>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    The font style <b><i><u><strike>Bold</strike></u></i></b> is <ins><del>similar</del></ins> to <strong><em>Strong</em></strong>.
+    <br>
+    5<sup>th</sup> Anniversary Offer
+    <br>
+    H<sub>2</sub>O
+    <br>
+    <strike> &#8377;  43999/- </strike>
+</body>
+</html>
+
+
+Summary:
+1. font
+2. font style
+3. font effects
+
+                                    Images in HTML
+
+- Images are of various types and HTML will not support all image types.
+- HTML supports images of following types
+
+    APNG                Animated Portable Network Graphics            .apng
+    PNG                Portable Network Graphics                        .png
+    JPEG                Joint Photographic Expert Group                .jpg, .jpeg, .jfif
+    GIF                Graphic Interchange Format                    .gif
+    BMP                Bitmap                                            .bmp
+    TIFF                Tagged Image File Format                        .tiff
+    ICO                Microsoft Icon                                    .ico
+    SVG                Scalar Vector Graphics                            .svg
+    Webp                Web Picture Format                                .webp
+
+- Images are embedded into page by using <img> element.
+
+Attributes:
+1. src                        : Virtual Path of image
+2. width    & height        : size for image
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+         .product {
+            display: grid;
+            grid-template-columns: 3fr 6fr 3fr;
+            margin-bottom: 50px;
+            border-bottom: 1px solid gray;
+         }
+         .rating {
+            background-color: green;
+            color:white;
+            font-size: 15px;
+            padding: 3px;
+            border-radius: 5px;
+         }
+         .reviews {
+            margin-top: 20px;
+         }
+         ul {
+            margin-left: -20px;
+            font-family: Arial;
+         }
+         li {
+            line-height: 35px;
+         }
+         img {
+            margin-left: 50px;
+         }
+    </style>
+</head>
+<body>
+    <div class="product">
+        <div>
+            <img src="images/realme.jpg" width="150">
+        </div>
+        <div>
+            <div> <font color="gray"><span class="bi bi-heart-fill"></span></font> <font face="Arial" color="blue" size="5">&nbsp; &nbsp;<b>realme C35 (Glowing Black, 64 GB)</b></font> </div>
+            <div class="reviews">
+                <span class="rating">
+                    4.4 <span class="bi bi-star-fill"></span>
+                </span>
+                &nbsp; &nbsp;
+                <span>
+                    <font color="gray" face="Arial" size="4">
+                        17,000 ratings and 3400 reviews
+                    </font>
+                </span>
+            </div>
+            <div class="features">
+                <ul>
+                    <li>4 GB RAM | 64 GB ROM | Expandable Upto 1 TB</li>
+                    <li>16.76 cm (6.6 inch) Full HD+ Display</li>
+                    <li>50MP + 2MP + 0.3MP | 8MP Front Camera</li>
+                    <li>5000 mAh Lithium Polymer Battery</li>
+                    <li>Unisoc Tiger T616 Processor</li>
+                    <li>1 Year Warranty for Phone and 6 Months Warranty for In-Box Accessories</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div>
+                <font size="6" face="Arial">
+                    <b>&#8377; 10,999</b>
+                </font>
+            </div>
+            <div>
+                <font size="4" face="Arial">
+                    <strike>&#8377; 13,999 </strike>
+                </font>
+                &nbsp;
+                <span>
+                    <font color="green" face="Arial"><b>25% Off</b></font>
+                </span>
+            </div>
+            <br>
+            <div>
+                Fee Delivery
+            </div>
+            <br>
+            <div>
+                Upto <b><font size="5" face="Arial">&#8377; 10,499 </font> off on Exchange</b>
+            </div>
+            <br>
+            <div>
+                <b><font size="4" color="green" face="Arial">Bank Offer</font></b>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="product">
+        <div>
+            <img src="images/realme.jpg" width="150">
+        </div>
+        <div>
+            <div> <font color="gray"><span class="bi bi-heart-fill"></span></font> <font face="Arial" color="blue" size="5">&nbsp; &nbsp;<b>realme C35 (Glowing Black, 64 GB)</b></font> </div>
+            <div class="reviews">
+                <span class="rating">
+                    4.4 <span class="bi bi-star-fill"></span>
+                </span>
+                &nbsp; &nbsp;
+                <span>
+                    <font color="gray" face="Arial" size="4">
+                        17,000 ratings and 3400 reviews
+                    </font>
+                </span>
+            </div>
+            <div class="features">
+                <ul>
+                    <li>4 GB RAM | 64 GB ROM | Expandable Upto 1 TB</li>
+                    <li>16.76 cm (6.6 inch) Full HD+ Display</li>
+                    <li>50MP + 2MP + 0.3MP | 8MP Front Camera</li>
+                    <li>5000 mAh Lithium Polymer Battery</li>
+                    <li>Unisoc Tiger T616 Processor</li>
+                    <li>1 Year Warranty for Phone and 6 Months Warranty for In-Box Accessories</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div>
+                <font size="6" face="Arial">
+                    <b>&#8377; 10,999</b>
+                </font>
+            </div>
+            <div>
+                <font size="4" face="Arial">
+                    <strike>&#8377; 13,999 </strike>
+                </font>
+                &nbsp;
+                <span>
+                    <font color="green" face="Arial"><b>25% Off</b></font>
+                </span>
+            </div>
+            <br>
+            <div>
+                Fee Delivery
+            </div>
+            <br>
+            <div>
+                Upto <b><font size="5" face="Arial">&#8377; 10,499 </font> off on Exchange</b>
+            </div>
+            <br>
+            <div>
+                <b><font size="4" color="green" face="Arial">Bank Offer</font></b>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

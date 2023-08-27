@@ -1,0 +1,119 @@
+HTML Forms
+Sudhakar Sharma
+•
+25 Mar
+Forms in HTML
+- Form provides an UI from where user can interact with our application.
+- It is primary component for handling "CRUD" operations.
+
+                    C        - Create
+                    R        - Read
+                    U        - Update
+                    D        - Delete
+
+- Form is a collection of elements like buttons, textbox, checkbox, radio, list box, dropdown etc..
+
+                                The <form> Element
+
+- It is container that comprises of various elements.
+- Form allows to handle CRUD operations using elements.
+- Form provides various attributes
+
+Syntax:
+            <form>
+                ....elements....
+            </form>
+ 
+    Attribute                Description
+    -----------------------------------------------------------------------
+     id                        It defines a unique reference ID for form
+                            [ JavaScript & CSS can use id to access form]
+
+    name                    It is used as a reference name for form.
+                            [ name can be common for various elements ]
+
+    class                    It is used as a reference for CSS and JavaScript.
+
+   
+    method                It defines the actions performed by form element.
+                            HTML form element can handle 2 methods
+                                a) GET
+                                b) POST
+
+Note:
+     1. GET method is used by form to "Fetch" data from server.    
+     2. POST method is used by form to "Submit" data to server.
+     3. If method is not defined , then the default method is GET.
+
+FAQ: Can we submit data to server on GET method?
+Ans:  Yes. But not recommended every time.
+
+FAQ: Why it is not recommended to submit data on GET?
+Ans :
+       - Data on GET request is submitted to server
+       - Data is appended into URL as query string.
+       - Everyone can view your data.
+       - It is not safe.
+       - It is easy to hack your data.
+       - It is stored in browser logs [history].
+       - It can be bookmarked.
+       - You can't submit complex data [binary].
+       - There is limit for data [ max 2048 chars ].
+       - The data submitted on GET can be cached by browser.
+       - Caching data into memory saves round trips.
+
+FAQ: What are the features of submitting data on POST?
+Ans:
+       - Data is submitted to server on POST
+       - Data is kept in Form Body
+       - It is not visible to users.
+       - It is safe.
+       - It is hard to hack your data.
+       - It is not stored in browser logs.
+       - It can't be bookmared.
+       - There is no limit for submitting data.
+       - You can submit complex data [binary].
+       - Data can't be cached on POST.
+       
+
+    action                        It defines the target page, where the form data is submitted.
+                                [jsp, php, asp, aspx etc..]
+
+       
+                                <form  method="post"   action="page.asp|jsp">
+
+    novalidate                It is used to by-pass the default HTML validations.
+
+                                <form  method="get"  novalidate>
+                                   
+                                    Email : <input type="email"> <button>Submit</button>
+
+                                </form>
+
+Form Events:
+
+            onsubmit             It defines the actions to perform when form is submitted.
+            onreset             It defines the actions to perform when form resets data.
+
+                                    Form Elements
+
+1. TextBox        : It is used for string input.
+
+                      <input type="text">         type refers to data type allowed into input.
+
+Attribute                Description
+----------------------------------------------------------------
+id                        It is a unique reference for element
+name                    It is also reference which can be common for several elements
+class                    It is used for CSS and JavaScript
+
+Note: It is mandatory that every form element must have a "name".
+        If name is not defined then form can't submit elements data.
+
+value                    It specifies the default value to display in textbox.
+
+placeholder            It defines the water mark text to display when value is not defined.
+
+                        <input type="text" name="UserName"  value="John"
+                               
+                              placeholder="User Name required">

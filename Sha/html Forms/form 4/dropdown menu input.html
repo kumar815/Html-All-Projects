@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form drop menu</title>
+    <!--used to dropdown list use properties=disabled,value,labal,option,optgroup,select-->
+</head>
+
+<body>
+    <!--dropdown list-->
+    <!--it can configure a list of items from where user can select any one option-->
+    <!--<select>creat a drop down
+        <otpgroup>create a group with set of options under one labal
+            <option>creates an option for dropdown list-->
+    <!--attributes value,select,disabled,text-->
+    <!--html dropdown is rc datatype.you can't format any option.
+        you can't define symbol inside option.it allows only "plain text"-->
+    <h2>dropdown menu</h2>
+    <form method="post" action="java">
+        <dl>Select Product
+            <dd>Items
+                <select name="product">
+        <optgroup label="Eletranic">
+            <option>"select product " </option>
+            <option value="pro445">sumsung</option>
+            <option value="lg6670">LG</option>
+        </optgroup>
+        <optgroup label="Fhisions">
+            <option disabled>Men's</option>
+            <option>Women's</option>
+        </optgroup>
+            </select>
+                <button>submit</button>
+            </dd>
+        </dl>
+        <br>
+        <h3>listbox</h3>
+        <select name="product" size="8" multiple>
+            <optgroup label="Eletranic">
+                <option>"select product " </option>
+                <option value="pro445">sumsung</option>
+                <option value="lg6670">LG</option>
+            </optgroup>
+            <optgroup label="Fhisions">
+                <option disabled>Men's</option>
+                <option>Women's</option>
+            </optgroup>
+            </select>
+    </form>
+</body>
+
+</html>

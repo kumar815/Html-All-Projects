@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marquee</title>
+    <style>
+        img {
+            margin-top: 50px;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500pxs;
+        }
+        
+        marquee {
+            padding: 300px;
+        }
+        
+        img:hover {
+            transform: scale(1.5);
+            box-shadow: 10px 10px 15px aqua;
+            transition: 5ms;
+        }
+        
+        img {
+            transition: 2s;
+        }
+    </style>
+</head>
+<!--example use to <marquee onmouseover and onmouseout=this.start()""> 
+    use eto this option your bannar mouse move bannar running stoped-->
+
+<body>
+    <marquee direction="down" scrollamount="20" onmouseover="this.stop()" onmouseout="this.start()">
+        <img src="../bannar image/mob.jpg" width="800" height="200">
+        <img src="../bannar image/mob.jpg" width="800" height="200">
+        <img src="../bannar image/mob.jpg" width="800" height="200">
+        <img src="../bannar image/mob.jpg" width="800" height="200">
+        <img src="../bannar image/mob.jpg" width="800" height="200">
+    </marquee>
+
+</body>
+
+</html>

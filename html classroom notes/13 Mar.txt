@@ -1,0 +1,377 @@
+Semantics 
+Sudhakar Sharma
+•
+13 Mar
+Layout Semantics
+- Header
+- Footer
+- Section
+- Main
+- Nav
+- Div
+- Span
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Footer</title>
+    <style>
+         footer {
+            background-color: black;
+            color:white;
+            padding: 10px;
+         }
+         .row-1 {
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+         }
+         .row-2 {
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            margin-top: 50px;
+         }
+         .footer-title {
+             font-weight: bold;
+             color:goldenrod;
+         }
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="row-1">
+            <div>
+                <div class="footer-title">AbeBooks</div>
+                <div>Books, art <br>
+                    & collectibles
+                </div>
+            </div>
+            <div>
+                col-2
+            </div>
+            <div>
+                col-3
+            </div>
+            <div>
+                col-4
+            </div>
+            <div>
+                col-5                
+            </div>
+        </div>
+        <div class="row-2">
+            <div>
+                col-1
+            </div>
+            <div>
+                col-2
+            </div>
+            <div>
+                col-3
+            </div>
+            <div>
+                col-4
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+Ex: Flipkart Footer
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Footer</title>
+    <style>
+        footer {
+            background-color: black;
+            color:white;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            height: 300px;
+            font-family: Arial;
+        }
+        .left-panel {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+        }
+        .right-panel {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            border-left: 2px solid gray;
+            padding-left: 20px;
+        }
+        .footer-title {
+            font-weight: bold;
+            color:white;
+        }
+        .footer-title~div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="left-panel">
+            <div>
+                <div class="footer-title">ABOUT</div>
+                <div>Contact Us</div>
+                <div>About Us</div>
+                <div>Careers</div>
+                <div>Flipkart Stories</div>
+                <div>Press</div>
+                <div>Flipkart Wholesale</div>
+                <div>Corporate Information</div>
+            </div>
+            <div>
+                col-2
+            </div>
+            <div>
+                col-3
+            </div>
+            <div>
+                col-4
+            </div>
+        </div>
+        <div class="right-panel">
+            <div>
+                col-1
+            </div>
+            <div>
+                col-2
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+8. aside            : It is a semantic element that defines content, which is not relative to
+                      current page or which can navigate aside the current content to its
+                      partner contents.
+
+Note: Styles to change position of any element in page.
+
+            position : absolute        : It removes from normal flow but keeps content
+                                          attached to paragraphs in page.
+
+            position : fixed            : It removes from normal flow but keeps content
+                                          attached to window. [scrolling is locked]
+
+            left, right, top, bottom    : They define the position of element along X and Y
+                                           axis.
+
+Syntax:
+ aside {
+      position: fixed;
+    right: 10px;
+     bottom: 0px;
+  }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inox - Movies</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        aside {
+            font-size: 30px;
+            color:darkcyan;
+            position: fixed;
+            right: 10px;
+            bottom: 0px;
+            background-color: white;
+            width: 30px;
+        }
+        aside div {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    We understand that you may have questions about the Microsoft Services Agreement. We have an FAQ page (https://www.microsoft.com/en-us/servicesagreement/upcoming-faq.aspx) that provides more information, including what Microsoft products and services it covers. Whenever we make changes, we provide a summary of the most notable changes to the current Microsoft Services Agreement. We will also continue to provide a summary of the changes to the previous version, and a link to the previous version, of the Microsoft Services Agreement on the Summary of Changes (https://www.microsoft.com/en-us/servicesagreement/upcoming-updates.aspx) page.
+    <aside>
+        <div class="bi bi-facebook"></div>
+        <div class="bi bi-twitter"></div>
+        <div class="bi bi-instagram"></div>
+        <div class="bi bi-linkedin"></div>
+        <div class="bi bi-youtube"></div>
+    </aside>
+</body>
+</html>
+
+9. menu                : It is used to organize content in navigation. If "nav" comprises
+                          of various categories then you can define using "menu".
+
+10. Details            : It is used to create expandable and collapsable container.
+
+11. Summary            : It is used as a node for "details" element.
+
+Syntax:
+    <menu>
+        <details>
+            <summary> Node Name </summary>
+            <div></div>
+            <div></div>
+        </details>
+    </menu>
+
+Note: If you want any details to keep open then use the attribute "open".
+
+Syntax:
+        <details open>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        details div {
+            width: 100px;
+            background-color: black;
+            color:white;
+            padding: 5px;
+            margin-top: 10px;
+        }
+        details {
+            margin-top: 20px;
+        }
+        nav {
+            padding: 20px;
+            background-color: lightgray;
+            width: 150px;
+            height: 500px;
+        }
+        details div:hover {
+            background-color: yellow;
+            color: black;
+            cursor: grab;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+       
+        <menu>
+            <div> <span class="bi bi-house-fill"></span> Home</div>
+            <details>
+                <summary>Electronics</summary>
+                <details>
+                    <summary>Televisions</summary>
+                    <div>Samsung</div>
+                    <div>LG</div>
+                </details>
+            </details>
+            <details>
+                <summary>Footwear</summary>
+                <div>Casuals</div>
+                <div>Sneakers</div>
+                <div>Boots</div>
+            </details>
+        </menu>
+    </nav>
+</body>
+</html>
+
+12. Main                : It is reffered as entry point of page. It specifies from where user
+                          can start in current website.
+
+Note: To keep any content center on page, you have to use the following effects
+       
+        body {
+                display:flex;
+                justify-content: center;            // horizontal center
+                align-items:center;                // vertical center
+                height: 400px;
+        }
+
+         Make sure that all content are kept in only one container "<main>"
+
+
+Ex: Netflix Design
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            color:white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            font-family: Arial;
+            background-size: cover;
+        }
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .sub-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .email {
+            width: 300px;
+            background-color: white;
+            color:black;
+            padding: 10px;
+            border:1px solid white;
+            margin-top: 10px;
+            height: 20px;
+        }
+        .button {
+            width: 150px;
+            background-color: red;
+            color:white;
+            padding: 10px;
+            height: 20px;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        .controls {
+            display: flex;
+        }
+    </style>
+</head>
+<body background="./images/netflixbanner.jfif">
+    <main>
+        <div class="title">
+            Unlimited movies, TV shows and more.
+        </div>
+        <div class="sub-title">
+            Watch anywhere. Cancel anytime.
+        </div>
+        <div class="register">
+            <div>Ready to watch? Enter your email to create or restart your membership.</div>
+            <div class="controls">
+                <div class="email"> Your email address </div>
+                <div class="button"> Get Started <span class="bi bi-chevron-right"></span> </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

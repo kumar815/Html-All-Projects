@@ -1,0 +1,300 @@
+Sudhakar Sharma
+•
+1 Apr
+Form Validation CSS Classes
+
+:required                It sets effects when element is defined with required attribute.
+
+:optional                It sets effects when element is not defined with required.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:optional+span {
+            display: none;
+        }
+        input:required+span {
+            display: inline;
+            color:red;
+        }
+        input:required {
+            border:1px solid red;
+            box-shadow: 2px 2px 2px red;
+        }
+        input:optional {
+            border:1px solid goldenrod;
+            box-shadow: 2px 2px 2px goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" ><span>*</span></dd>
+        <dt>Age</dt>
+        <dd><input type="number"><span>*</span></dd>
+        <dt>Password</dt>
+        <dd><input type="password" required><span>*</span></dd>
+    </dl>
+</body>
+</html>
+
+ :in-range                : It sets effects to element if numeric value is with in specified range
+ 
+ :out-of-range        : It sets effects to element if value is not with in the specified range.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Age:in-range+div {
+            display: none;
+        }
+        .Age:out-of-range+div {
+            display: block;
+            color:red;
+        }
+        .Age:in-range {
+            border:1px solid green;
+            box-shadow: 2px 2px 2px green;
+        }
+        .Age:out-of-range {
+            border:1px solid red;
+            box-shadow: 2px 2px 2px red;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>Age</dt>
+        <dd>
+            <input type="number" class="Age" min="15" max="30">
+            <div>Age 15 to 30 only</div>
+        </dd>
+    </dl>
+</body>
+</html>
+
+ :valid                It sets effects to element if all validations passed.
+
+ :invalid            It sets effects if any specific validation failed.
+
+Note: Validations include => required, minlength, pattern, min, max etc..
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Password:valid+div {
+            display: none;
+        }
+        .Password:invalid+div {
+            display: block;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>Password</dt>
+        <dd>
+            <input type="password" class="Password" pattern="(?=.*[A-Z])\w{4,10}">
+            <div>Password 4 to 10 chars with atleast one Uppercase letter.</div>
+        </dd>
+    </dl>
+</body>
+</html>
+
+ :checked             It verifies the checked property for radio and checkbox, if they are
+                     checked then will set a some effects and unchecked then removes
+                     the effects.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .terms:checked+span{
+            color:green;
+        }
+        .terms+span {
+            color:red;
+        }
+        .terms:checked~button {
+            display: block;
+        }
+        .terms~button {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+     <fieldset>
+         <legend>Terms of Service</legend>
+         <textarea disabled rows="3" cols="30">please read our terms of service</textarea>
+         <div>
+            <input type="checkbox" class="terms"> <span>I Accept</span>
+            <br><br>
+            <button>Submit</button>
+         </div>
+     </fieldset>
+</body>
+</html>
+
+    :disabled            It sets effects to element when it is set with disabled attribute.
+    :read-only            It sets effects for element when it is readonly.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:read-only {
+            cursor: not-allowed;
+        }
+        input {
+            cursor:text;
+        }
+        button:disabled {
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+     <dl>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text" class="UserName" readonly  value="John">
+        </dd>
+     </dl>
+     <button disabled>Submit</button>
+</body>
+</html>
+
+   ::placeholder          It defines effects for placeholder in input element.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input::placeholder {
+            color:red;
+            font-style: italic;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+     <dl>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text" class="UserName" placeholder="User Name in Block Letters">
+        </dd>
+     </dl>
+     <button disabled>Submit</button>
+</body>
+</html>
+
+       :focus            It defines effects when element gets focus.
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .UserName:focus+div {
+            display: block;
+            color:red;
+        }
+        .UserName+div {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+     <dl>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text" class="UserName" placeholder="User Name in Block Letters">
+            <div>Name in Block Letters Only</div>
+        </dd>
+     </dl>
+</body>
+</html>
+
+Ex: Verifying Required with Invalid
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .UserName:invalid+div {
+            display: block;
+            color:red;
+        }
+        .UserName:valid+div {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+     <dl>
+        <dt>User Name</dt>
+        <dd>
+            <input type="text" class="UserName" required>
+            <div>User Name Required</div>
+        </dd>
+     </dl>
+</body>
+</html>
+
+FAQ: What is difference between  "display:none"  & "visibility:hidden" ?
+Ans :  display:none  will hide the specified element and removes the space allocated
+           for element.
+
+        visibility:hidden will hide the element without removing the space allocated.
+
+Syntax:
+        h1 {
+            display:none;
+        }
+        h1 {
+            visibility:hidden;
+        }

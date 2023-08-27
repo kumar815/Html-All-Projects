@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element state pseudo classes</title>
+    <style>
+        .checkbox:checked+div {
+            display: block;
+        }
+        
+        .checkbox~div {
+            display: none;
+        }
+        
+        .focus~div {
+            display: none;
+        }
+        
+        .focus:focus+div {
+            display: block;
+        }
+        
+        #place:read-only {
+            display: inline-block;
+            cursor: not-allowed;
+        }
+        
+        #password:required+div {
+            display: none;
+        }
+        
+        #password:focus+div {
+            display: inline-block;
+        }
+        
+        #age:out-of-range+div {
+            display: inline-block;
+        }
+        
+        #age:in-range {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get">
+        <input type="checkbox" value="male" class="checkbox">:male
+        <div>This is for male</div>
+        <input type="checkbox" value="female" class="checkbox">:female
+        <div>This is for female</div>
+    </form>
+    <form method="get">
+        firstname:<input type="text" name="name" class="focus">
+        <div>enter your first name</div>
+        lastname: <input type="text" name="name" class="focus">
+        <div>enter your last name</div>
+        place:<input type="text" value="bangalure" id="place" readonly>
+        <div>must stay in bengalore</div>
+        password:<input type="password" id="password" pattern="\d{4,10}" name="password" required>
+        <div>4 to 10 numerics</div>
+        age:<input type="number" name="age" id="age" min="13" max="19">
+        <div>you are not eligible</div>
+
+        <div class="a">you are eligible</div>
+
+        <button>submit</button>
+    </form>
+
+</body>
+
+</html>

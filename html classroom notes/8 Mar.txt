@@ -1,0 +1,120 @@
+Meta and Body Section
+Sudhakar Sharma
+•
+8 Mar
+HTML Page Structure
+- .html, .htm
+- Document Declaration  <!DOCTYPE html>
+- Document Scope   <html> </html>
+- Language "lang"
+- Head and Body
+    title, link, meta, script, style
+- Favicon
+    .ico   32x32
+
+                                           Meta
+- Meta refers to "Meta Data".
+- Meta is not for clients, it is for  browser and SEO. [Search Engine Optimization]
+- Meta is used to make the page responsive and SEO friendly.
+- Responsive makes your content fit to any device. [Mobile, Tap, laptop, watch etc..]
+- Meta provides responsive attributes for page
+
+    <meta  name="viewport"  content="width=device-width, initial-scale=1">
+
+            viewport        =  device screen
+            content        =  your page content
+            initial-scale    =  zoom level  1=100%
+
+Note: To test responsive pages, download and install "Mobile Simulator Extention" for google chrome browser.
+                        chrome://apps  => webstore => mobile simulator => add
+
+
+         <meta   http-equiv="refresh"  content="5">        5 = 5sec
+
+- Meta provides attributes to make the page SEO friendly
+
+        <meta  charset="utf-8">            => which scripting language is used in page
+                                                    english, arabic, china, japan etc..
+         Unicode Transformation Format                                            
+                                                        8-bit        english
+                                                        16-bit
+                                                        32-bit        
+
+         <meta name="keywords"  content="some keywords used to find your page">
+
+        <meta name="description"  content="something about your site-summary">
+
+
+Summary:
+- viewport
+- http-equiv
+- charset
+- keywords
+- description
+
+Ex:
+
+<!DOCTYPE html>
+<html  lang="en-in">
+    <head>
+        <title>Amazon | Shopping</title>
+        <link rel="shortcut icon" href="public/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=2">
+        <meta http-equiv="refresh" content="4">
+        <meta charset="utf-8">
+        <meta name="keywords" content="Online Shopping, Best Offers, Cheap Mobiles, Offers on Elelectronics, min 50% off">
+        <meta name="description" content="Online Shopping Site with best offers..">
+    </head>
+    <body>
+        We understand that you may have questions about the Microsoft Services Agreement. We have an FAQ page (https://www.microsoft.com/en-us/servicesagreement/upcoming-faq.aspx) that provides more information, including what Microsoft products and services it covers. Whenever we make changes, we provide a summary of the most notable changes to the current Microsoft Services Agreement. We will also continue to provide a summary of the changes to the previous version, and a link to the previous version, of the Microsoft Services Agreement on the Summary of Changes (https://www.microsoft.com/en-us/servicesagreement/upcoming-updates.aspx) page.
+    </body>
+</html>
+
+- Styles are used to embed CSS into page.
+
+        <style  type="text/css">
+
+        </style>
+
+- Scripts are to embed JavaScript page.
+   
+        <script type="text/javascript"  src="">
+        </script>
+
+Summary - Head Section
+----------------------------------
+1. title
+2. link
+3. meta
+4. script
+5. style
+                                        Body Section
+- It defines the content to present in browser workspace.
+
+        <body>
+
+        </body>
+
+- Body token contains the following attributes
+
+        1. bgcolor                    : It sets a background color
+        2. text                        : It sets text color
+
+
+Note: HTML colors are defined in 3 different ways
+        1. color name                    : red, green, blue
+        2. shade name                    : lime, lemon, lightred, lightgray
+        3. hexadecimal code            :  # and 6 chars code
+                                               #  and 3 chars code
+
+                                               Color Combination
+                                               #RGB            Red, Green, Blue
+                                               #RRGGBB        Red, Green, Blue
+
+                                               Red,Green,Bule : 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f
+                                                                    dark                                bright
+Syntax:
+            <body  bgcolor="#f00">                red
+            <body  bgcolor="#0f0">                green
+            <body  bgcolor="#00f">                blue
+            <body  bgcolor="#00ff00">            green

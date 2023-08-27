@@ -1,0 +1,94 @@
+Body Attributes and Semantics
+Sudhakar Sharma
+•
+9 Mar
+Summary
+- Meta Responsive
+    viewport, http-equiv
+- Meta SEO
+    keywords, charset, description, ...
+- Body
+    bgcolor
+    text
+- HTML colors
+    color name
+    shade name
+    hexa decimal code   #rgb    #rrggbb     0 - f
+
+
+1. bgcolor
+2. text
+3. background        : It is used to set a background image for page.
+
+Note: Never use any physical path for resources in webpage. It is recommended to use
+        only virtual path.
+
+                <body  background="C:\images\name.jpg">        // not good
+
+        Copy images into project folder and access from project folder using virtual path.
+
+                  ./                It can access the files of current folder
+                  ../                It can access the files from folder one level back.
+                  ../../../            3 levels back
+
+         <body   background="./public/images/netflixbanner.jpg">
+
+4. align        : It align the body content left, center, right or justify.
+
+          <body   align="center">
+
+5. alink        :  It sets color for active link.
+
+6. vlink        :  It sets color for visited link.
+
+          <body   alink="red"    vlink="gray">
+
+              <a href="http://www.amazon.in"&gt; Amazon </a>
+
+          </body>
+
+7.  leftmargin                ]
+8.  rightmargin            ]     Margin defines space between border and browser.
+9.  topmargin                ]
+10. bottommargin        ]
+
+FAQ:
+1. What is the default size for webpage?
+A. 1200px width and 768px height
+
+2. What is difference between margin and padding?
+A. Margin sets space around border and padding sets space around content.
+    Padding is space between content and border.
+
+3. What is the recommended space for content on page?
+A. 500px
+
+Syntax:
+    <body  leftmargin="350"  rightmargin="350" topmargin="50" bottommargin="50">
+
+    </body>
+
+                               Elements in Body Section
+
+- HTML 4 uses table for designing page layout.
+- Tables lead to a situation called "Kiss-of-Death".
+- HTML 5 introduced lot of semantics to design page more SEO friendly and user friendly. [200 semantics]
+- Semantic refers to specific purpose. WHATWG designed various elements for semantics.    [ MDN , WHATWG]
+- Body Semantics newly added into HTML for layout
+
+1. aside
+2. article
+3. dialog
+4. figure
+5. header
+6. section
+7. footer
+8. nav
+9. menu
+10. div
+11. span
+12. main
+13. figcaption
+
+layout.png
+Image

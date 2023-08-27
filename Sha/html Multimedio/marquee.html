@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--marquee-->
+
+<body>
+    <!--it is used tocreat sliding and scorllingcontent is page
+    <marquee>-->
+    <!--Attributes:-
+    1)scrollamount :-it sets scrolling speed from 1 to 100
+    2)direcction :- it sets scrolling:left,right,up,down
+    3)behavior :- it changes from sxroling to sliding alternate
+    4)loop :- is specifies the number of tie to dispaly 
+    5)width & Height :-it sets width&height for marquee area
+    6)bg color :- it sets backgroung color for marquee area-->
+    <scrollamount="30" bgcolor="#B2BEB5">
+        <marquee loop="1">
+            <div>
+                <marquee direction="right" width="100"><img src="../bannar image/mob.jpg"></marquee>
+            </div>
+            <div>
+                <marquee direction="left" width="800"><img src="../bannar image/mob.jpg"></marquee>
+            </div>
+        </marquee>
+        <marquee scrollamount="30" behavior="alternate" width="1350" height="180" bgcolor="#7393B3">
+            <div>
+                <img src="../bannar image/you1.jpg">
+                <img src="../bannar image/you.jpg">
+                <img src="../bannar image/you1.jpg">
+            </div>
+        </marquee>
+        <!--speed-->
+        <marquee scrollamount="80" behavior="alternate">
+            <img src="../bannar image/you.jpg">
+        </marquee>
+        <!--which direction to move your bannaer-->
+        <marquee direction="up" width="" height="100">
+            <img src="../bannar image/you.jpg">&nbsp; <img src="../bannar image/you.jpg">
+        </marquee>
+        <!--start 800 display size (move to left) apply width-->
+        <marquee width="800" height="200">
+            <img src="../bannar image/you.jpg">
+        </marquee>
+        <!--2 times moving bannar after stop-->
+        <marquee loop="2">
+            <img src="../bannar image/you.jpg">
+        </marquee>
+        <!--this is bannar left and right moving-->
+        <marquee scrollamount="80" behavior="alternate">
+            <img src="../bannar image/you.jpg">
+        </marquee>
+        <!--backgroung color red shown-->
+        <marquee bgcolor="red" scrollamount="40" behavior="alternate">
+            <img src="../bannar image/you.jpg">
+        </marquee>
+</body>
+
+
+</html>

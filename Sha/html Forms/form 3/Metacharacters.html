@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meta chars</title>
+    <style>
+        button {
+            color: blueviolet;
+            border-color: black;
+            font-weight: bold;
+            width: 100px;
+            height: 20px;
+            padding: 10px 10px 25 10px;
+            backface-visibility: visible;
+            background-color: rgba(15, 118, 29, 0.3);
+        }
+    </style>
+</head>
+<form method="get" class="title">
+    <!--?-->
+    <!--zero or one occurance of a chars-->
+    <input type="password" name="password" pattern="?" size="40px" placeholder="zero or one ">
+    <button>??</button><br>
+    <input type="password" pattern="anand?" name="password" size="40px" placeholder="anand?=anand(or)anan">
+    <button>--?--</button><br>
+    <input type="password" pattern="anand?r" name="password" size="40px" placeholder="anand?r=anandr(or)ananr">
+    <button>--?--</button>
+</form><br>
+<form method="get">
+    <!--+-->
+    <!--one more occurence of a chars-->
+    <input type="password" name="password" pattern="+" size="40px" placeholder="one more">
+    <button>++</button><br>
+    <input type="password" name="password" pattern="anan+d" size="40px" placeholder="anan+d=anand(or)anannnd">
+    <button>--+--</button>
+</form><br>
+<form method="get">
+    <!--*-->
+    <!--zero more occurence of a chars-->
+    <input type="password" name="password" pattern="*" size="40px" placeholder="any char,num,spe">
+    <button>**</button><br>
+    <input type="password" name="password" pattern="kuma*r" size="40px" placeholder="kuma*r=kumar(or-(only-aa))kumaaar">
+    <button>--*--</button>
+</form>
+<br>
+<form method="get">
+    <!--\-->
+    <!--it transfars chars into meta char and "vice versa"-->
+    <input type="password" name="password" pattern="\" size="40px" placeholder="vice versa">
+    <button>gmail.com</button><br>
+    <input type="password" name="password" pattern="\(\+91\)" size="40px" placeholder="(\+91\) result=(+91)">
+    <button>--\--</button>
+</form>
+<br><br>
+<form method="get">
+    <!--| call (pip)-->
+    <!--pip refars to "or" you can configure multipole chars or word sqquenes-->
+    <input type="password" name="password" pattern="red|green|blue" size="40px" placeholder="select patticular color red!green!blue">
+    <button>submit</button><br>
+    <input type="password" name="password" pattern="red" size="40px" placeholder="Declare result=(red) only type red not other colors">
+    <button>--|(or)--</button>
+</form>
+<form method="post">
+    <!--\i-->
+    <!--igonre case for given string(before (low vconvrt upper)(upper conver low))-->
+    <input type="password" name="password" pattern="anand\i" size="40px" placeholder="anand">
+    <button>Submit</button><br>
+    <input type="password" name="password" pattern="kUMAR\?\i" size="40px" placeholder="KUMAR\?\i result=kumaR">
+    <button>Submit</button><br>
+    <input type="password" name="password" pattern="ianand\?\i" size="40px" placeholder="anand\?\i result=ANANd">
+    <button>\i</button><br>
+    <input type="password" name="password" pattern="\ianand" size="40px" placeholder="\ianand result=ANAND">
+    <button>--\i--</button>
+</form>
+<br>
+<br>
+<form method="get">
+    <!--\d -->
+    <!--it refar to single digit number value -->
+    <input type="password" name="password" pattern="\d" size="30px" placeholder="only single digit num result=1,2,3 etc...">
+    <button>\d</button><br>
+    <input type="password" name="password" pattern="\d\d" size="30px" placeholder="only double digit result result=22(or)33 etc...">
+    <button>--\d--</button>
+</form>
+<br>
+<form method="get">
+    <!--\D-->
+    <!--it refar to non-numaric chars ,all chars other then noun (not allow_) -->
+    <input type="password" name="password" pattern="\D" size="30px" placeholder="a-z A-Z Special chars Single char entry result=1,a,@ etc...">
+    <button>\D</button><br>
+    <input type="password" name="password" pattern="\D\D" size="30px" placeholder="only double digit result result=!@,02(or)Ac ,1D,!f,etc...">
+    <button>--\D--</button>
+</form>
+<br>
+<form method="get">
+    <!--\w-->
+    <!--it refar to word chars,which include A-Z, a-z, 0-9,(hypen_allowed) (special chars not-all0wed)-->
+    <input type="password" name="password" pattern="\w" size="60ppx" placeholder="a-z A-Z 0-9 (hypen_Allow)(Special chars not-allowed) result=0-9,a-z,A-Z _ etc...">
+    <button>\w</button><br>
+    <input type="password" name="password" pattern="\w\w" size="60px" placeholder="a-z A-Z 0-9 (hypen_Allow)(Spe char not-allowed) result=00-99,aa-zz,AA-ZZ _ _  etc...">
+    <button>--\w--</button>
+</form>
+<br>
+<form method="get">
+    <!--\W-->
+    <!--it refar to NON-word chars,ALL Specail chars expect(allowed=!@#$%^&*().,?/\| (not allowed A-Z, a-z, 0-9,(hypen_not allowed) -->
+    <input type="password" name="password" pattern="\W" size="60ppx" placeholder="only specail chars Allowed result=!@#$%^&*()>., etc...">
+    <button>\W</button><br>
+</form>
+<br>
+<form method="get">
+    <!--\s-->
+    <!--it refars to "blank space" (one space)-->
+    <input type="password" name="password" pattern="\s" size="30ppx" placeholder="only space result=blank space...">
+    <button>\s</button><br>
+    <input type="password" name="password" pattern="an\sand" size="30ppx" placeholder="only space result=an and...">
+    <button>\s</button><br>
+</form>
+<br>
+<form method="get">
+    <!--[]-->
+    <!--it define specific and range of eliments-->
+    <input type="password" name="password" pattern="\d[4-15]" size="50ppx" placeholder="\d[4-15]specific range result=4356,23456778">
+    <button>[submit]</button>
+    <br>
+</form>
+<br>
+<form method="get">
+    <!--[a,d,s]-->
+    <!--it define specific chars allowed-->
+    <input type="password" name="password" pattern="[a,d,s]" size="50ppx" placeholder="[a,d,s]only spefific chars result=a,d,s allowed">
+    <button>[ ]</button>
+    <br>
+</form>
+<br>
+<form method="get">
+    <!--[A-Z]-->
+    <!--only Uppercase letters allowed-->
+    <input type="password" name="password" pattern="[A-Z]" size="50ppx" placeholder="[A-Z] RESULT=Uppercase letters">
+    <button>[A-Z]</button>
+</form>
+<br>
+<form method="get">
+    <!--[a-z]-->
+    <!--only lowercase letters allowed-->
+    <input type="password" name="password" pattern="[a-z]" size="50ppx" placeholder="[a-z] RESULT=lowercase letters">
+    <button>[a-z]</button>
+</form>
+<br>
+<form method="get">
+    <!--[a-z A-Z]-->
+    <!--BOTH lowercase AND Uppercase letters allowed-->
+    <input type="password" name="password" pattern="[a-z A-Z]" size="50ppx" placeholder="[a-z A-Z] RESULT=lower AND UPPER letters">
+    <button>[a-z A-Z]</button>
+    <input type="password" name="password" pattern="[a-Z]" size="50ppx" placeholder="[a-Z] RESULT=lower AND UPPER letters">
+    <button>[a-Z]</button>
+</form>
+<br>
+<form method="get">
+    <!--[0-9]-->
+    <!--only Numaric allowed-->
+    <input type="password" name="password" pattern="[0-9]" size="50ppx" placeholder="[0-9] RESULT=only numaric">
+    <button>[0-9]</button>
+</form>
+<br>
+<form method="get">
+    <!--[a-z A-Z 0-9]-->
+    <!--ALPHA Numaric allowed-->
+    <input type="password" name="password" pattern="[a-z A-Z 0-9]" size="50ppx" placeholder="[a-z A-Z 0-9] RESULT=alpha numaric">
+    <button>[a-z A-Z 0-9]</button>
+</form>
+<br>
+<form method="get">
+    <!--[a-z A-Z 4-8]-->
+    <!--chars is specifid range are allowed-->
+    <input type="password" name="password" pattern="[a-z A-Z 4-8]" size="50ppx" placeholder="[a-z A-Z 4-8] RESULT=4,5,6,7,8 and (a-z(A-Z)allowed)range">
+    <button>[a-z A-Z 4-8]</button>
+</form>
+<br>
+<form method="get">
+    <!--[^a,d,f]-->
+    <!--Excluding specified range are allowed(meens a,d,f not allowed other all  chars allowed)-->
+    <input type="password" name="password" pattern="[^a,d,f]" size="50ppx" placeholder="[^a,d,f] RESULT=b,c,e,g,h ...z allowed range">
+    <button>[^a,d,f=]</button>
+</form>
+<br>
+<form method="get">
+    <!--[^a-m]-->
+    <!--Excluding the chars spcified chars all others allowed(meens a-m chars not allowed other all  chars allowed)-->
+    <input type="password" name="password" pattern="[^a-m]" size="50ppx" placeholder="[^a-m]RESULT=n,o,p...z allowed range">
+    <button>[^a-m]</button>
+</form>
+
+
+</body>
+
+</html>

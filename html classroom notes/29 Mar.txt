@@ -1,0 +1,190 @@
+Sudhakar Sharma
+•
+29 Mar
+Form Elements
+1. TextBox
+2. Password Input    : It can mask the chars with "*", all other attributes are similar to
+                          text box. Except that you can't use "list" for password.
+
+ Syntax:
+ <input type="password"  required  minlength="4" maxlength="10" pattern="[A-Z]{4,10}">
+
+3. Number Input        : It allows to input only numeric value.
+                          Attributes: min, max, step
+
+Syntax:
+  <input type="number"  min="15"  max="30"  value="22">
+  <input type="number"  min="1"  max="100"  value="1" step="5">
+  <input type="number"  min="10.45" max="18.45"  value="10.45"  step="0.01">
+
+4. Range Input        : It is similar to number but have a slider for selecting values.
+
+Syntax:
+   <input type="range"  min="10.45" max="18.45"  value="10.45"  step="0.01">
+
+
+5. Email Input        : It is used to validate email address.
+
+Syntax:
+    <input type="email"  required  autofocus name="Email">
+
+
+6. Url Input            : It is used to validate  "URL" format.
+
+                           http://www.domain.com
+
+Syntax:
+    <input type="url"  name="address">
+
+
+7. Date and Time Input    :     It allows and validates only date & time values.
+                                There are various date and time types.
+                                 - date
+                                 - datetime-local
+                                 - time
+                                 - week
+                                 - month
+                                 - year
+                                Date format for configuration must be "YYYY-MM-DD"
+                                You can restrict date using "min and max" attributes.
+Syntax:
+<input type="date"  name="departure"  min="2023-03-29"  max="2023-04-15">
+<input type="month">
+<input type="time">
+<input type="week">
+<input type="datetime-local">
+
+8. Color Input        : It allows user to select a color from color picker.
+                          The color value must be only 6 char hexadecimal with "#".
+
+Syntax:
+ <input type="color"  value="#ff0000">
+
+9. File Input            : It can display a file browser. You can select a file from your device
+                          using file input.
+
+FAQ: Can we restrict file type?
+Ans: No. You can set filter, which can changed.
+       Filter is defined by using "accept" attribute.
+
+Syntax:
+    <input type="file"  accept=".jpg">
+    <input type="file"  accept=".jpg, .png">
+
+FAQ: How to enable selection of multiple files?
+Ans : By using "multiple" attribute.
+
+Syntax:
+    <input type="file"  accept=".jpg"  multiple>
+
+10. Radio Buttons        : Radio buttons are used to exhibit "Mutex".
+                              [Mutual Exclusion].
+
+                              Radio allows to select one or multiple.
+
+                              Radio will not allow to de-select the selection.
+
+                              Hence you have to use radios with Mutex.
+
+                              Mutex can be defined by specifying same name for all radios
+                              in  a category.
+Syntax:
+    <input type="radio" name="gender">  Male
+    <input type="radio" name="gender">  Female
+
+                             You can make any radio selected by default by using "checked"
+Syntax:
+    <input type="radio" name="gender" checked> Male
+
+                              Radios submit  "ON" as value, hence you have  to define
+                              a value for every radio.
+
+Syntax:
+    <input type="radio" name="gender"  value="Male"> Male
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form method="get">
+          <dl>
+            <dt>Gender</dt>
+            <dd>
+               <input type="radio" name="gender" value="Male" checked> Male
+               <input type="radio" name="gender" value="Female"> Female
+            </dd>
+            <dt>Payment</dt>
+            <dd>
+               <input type="radio" name="pay"> Cash
+               <input type="radio" name="pay"> Credit Card
+               <input type="radio" name="pay"> UPI
+            </dd>
+          </dl>
+          <button>Submit</button>
+     </form>
+</body>          
+</html>
+
+11. CheckBox Input            : It is similar to radio but allows to check and uncheck any
+                                  option.
+                                  You can select one or multiple.
+Syntax:
+    <input type="checkbox"  name="course"  value="HTML" checked> HTML
+
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form method="get">
+          <dl>
+             <dt>Select Course</dt>
+             <dd>
+               <input type="checkbox" checked name="course" value="HTML"> HTML
+               <input type="checkbox" name="course" value="CSS"> CSS
+               <input type="checkbox" checked name="course" value="JavaScript"> JavaScript
+             </dd>
+          </dl>
+          <button>Submit</button>
+     </form>
+</body>          
+</html>
+
+Ex: Bootstrap Checkbox
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css&quot; rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+</head>
+<body class="container">
+     <form method="get">
+          <dl>
+             <dt>Select Course</dt>
+             <dd class="form-switch">
+               <input type="checkbox" class="form-check-input" checked name="course" value="HTML"> HTML  <br>
+               <input type="checkbox" class="form-check-input" name="course" value="CSS"> CSS <br>
+               <input type="checkbox" class="form-check-input" checked name="course" value="JavaScript"> JavaScript
+             </dd>
+          </dl>
+          <button>Submit</button>
+     </form>
+</body>          
+</html>

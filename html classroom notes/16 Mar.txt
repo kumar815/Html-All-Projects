@@ -1,0 +1,287 @@
+Ordered List
+Sudhakar Sharma
+•
+16 Mar
+Headings
+Paragraphs
+Blockquotes
+Data List with Terms and Definitions
+
+                                Fieldset and Legend
+- Fieldset is a container with frame.
+- Legent is a caption for container.
+- Fieldset is used for display various categories of content.
+
+Syntax:
+    <fieldset>
+           <legend> Title </legend>
+           ........
+           ........
+    </fieldset>
+
+- CSS Shadow
+    a) box-shadow
+    b) text-shadow
+
+Syntax:
+    div {
+        box-shadow: hPixels  vPixes  blurPixels  color;
+      }
+
+    div {
+        box-shadow: 5px 4px 2px gray;
+     }
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics</title>
+    <style>
+       dl {
+         display: grid;
+         grid-template-columns: 6fr 6fr;
+       }
+       dt {
+          background-color: black;
+          color:white;
+          margin-top: 5px;
+       }
+       fieldset {
+         margin-top: 10px;
+         box-shadow: 4px 4px 3px black;
+       }
+       legend {
+          border:1px solid black;
+          width: 150px;
+          text-align: center;
+          box-shadow: 2px 2px 3px red;
+       }
+    </style>
+</head>
+<body>
+    <fieldset>
+      <legend>Personal Details</legend>
+      <dl>
+         <dt>Name</dt>
+         <dd>some name</dd>
+         <dt>Age</dt>
+         <dd>some number</dd>
+         <dt>Date of Birth</dt>
+         <dd>some date</dd>
+       </dl>
+    </fieldset>
+    <fieldset>
+      <legend>Address</legend>
+      <dl>
+         <dt>City</dt>
+         <dd>some name</dd>
+         <dt>State</dt>
+         <dd>some name</dd>
+         <dt>Postal Code</dt>
+         <dd>some code</dd>
+       </dl>
+    </fieldset>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics</title>
+    <style>
+       legend {
+         text-align: center;
+         padding-left: 20px;
+         padding-right: 20px;
+       }
+       fieldset {
+         border-left: none;
+         border-right: none;
+         border-bottom: none;
+       }
+    </style>
+</head>
+<body>
+    <fieldset>
+       <legend> New to Amazon? </legend>
+    </fieldset>
+</body>
+</html>
+
+                            Ordered List and Unordered List
+
+- Ordered list is used for creating a numbered list.
+- <ol> for creating list.
+- <li>  for creating list item.
+
+Syntax:
+        <ol>
+           <li> Item-1 </li>
+           <li> Item-2 </li>
+        </ol>
+
+Attributes:
+        a) type            : numbering type        1, A, a, i, I
+
+                              <ol  type="a">
+
+        b) start            : specifies from where numbering have to start. It is refering
+                              to level number.
+
+                               <ol  type="1"  start="5">
+                                <ol  type="a"  start="5">
+
+        c) reversed        : It will display numbering in reverse order.
+   
+                                <ol  type="1"  reversed>
+                                <ol  type="a"  reversed>
+FAQ's
+1. Can we add normal text in <ol> instead of <li> ?
+A. Yes
+
+    <ol>
+        <h2>Title</h2>
+        <li> Item - 1 </li>
+        <li> Item - 2 </li>
+        <h2>Title </h2>
+        <li> Item - 3 </li>
+        <li> Item - 4 </li>
+    </ol>
+
+2. How to remove numbering for list ?
+A. By using css attribute
+
+        "list-style : none"
+
+    ol {
+       list-style :none;
+    }
+
+3. How to create a scrollable list?
+A. By using CSS Overflow attribute
+
+    ol {
+        border: 1px solid black;
+        width:100px;
+        height:100px;
+        overflow: auto;
+    }
+
+4. How to display list side by side or in multiple columns?
+A. By using CSS
+            display :flex;        side-by-side
+            display : grid;        columns
+            columns:2;        columns
+
+ Syntax:  Side-By-Side
+        ol {
+            display : flex;
+        }
+        li {
+           margin-right: 50px;
+        }
+
+Syntax: Columns  [numbering will be one below another]
+        ol {
+            columns : 2;
+         }
+
+Syntax: Grid  [numbering will be one beside another]
+
+        ol {
+            display:grid;
+            grid-template-columns: 6fr 6fr;    
+        }
+
+5. How to create a nested list?
+A. By configuring <ol> with in existing <li>.
+
+Syntax:
+        <ol>
+            <li> Item-1 </li>
+            <li> Item-2
+                 <ol>
+                   <li> Child-1 </li>
+                   <li> Child-2 </li>
+                </ol>
+            </li>
+        </ol>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+    <ol>
+      <li>HTML
+         <ol type="a">
+         <li>Normal Elements
+             <ol type="i">
+                <li>Bold</li>
+                <li>Italics</li>
+             </ol>
+         </li>
+         <li>Void Elements</li>
+        </ol>
+     </li>  
+        <li>JavaScript
+            <ol type="a">
+            <li>Variables</li>
+            <li>Operators</li>
+           </ol>
+        </li>
+       
+    </ol>
+</body>
+</html>
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics</title>
+    <style>
+       .options {
+          columns: 2;
+          margin-top: 20px;
+          line-height: 40px;
+       }
+    </style>
+</head>
+<body>
+    <ol type="1">
+        <li>
+           HTML is __________ language.
+           <ol type="a" class="options">
+               <li>Programming</li>
+               <li>Presentation</li>
+               <li>Structured</li>
+               <li>Imperative</li>
+           </ol>
+        </li>
+    </ol>
+</body>
+</html>
+
+- Unordered List is similar to ordered list but have a bulleted list.
+- <ul>  Unordered List
+- <li>   List Item

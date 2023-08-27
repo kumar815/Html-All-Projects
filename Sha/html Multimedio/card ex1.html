@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<style>
+    body {
+        background-color: blanchedalmond;
+        margin-top: 100px;
+        margin-left: 300px;
+    }
+    
+    .container {
+        display: flex;
+    }
+    
+    .card-header {
+        box-sizing: 3px 3px 5px blue;
+    }
+    
+    .card-header:hover {
+        transform: scale(1.5);
+        box-shadow: 10px 10px 15px orangered;
+        transition: 50ms;
+        border-radius: 20fr;
+        background-color: blueviolet;
+    }
+    
+    img {
+        transition: 40s;
+    }
+    
+    .card {
+        width: 350px;
+        border: 3px solid black;
+        box-shadow: 2px 2px 2px gray;
+        padding: 15px;
+        margin: 40px;
+        height: 200px;
+        letter-spacing: 3px;
+        box-shadow: 0px 0px 5px 10px red;
+        border-radius: 1rem;
+        font-weight: bold;
+        border-style: double;
+    }
+    
+    .card-name {
+        margin-top: -20px;
+        letter-spacing: 3px;
+        word-spacing: 2px;
+        font-weight: bolder;
+    }
+    
+    .chip {
+        margin-top: 0px;
+        font-size: 35px;
+        margin-left: 20px;
+        color: gold;
+    }
+    
+    .num {
+        font-size: 15px;
+        margin-top: 5px;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .valid {
+        margin-top: -10px;
+        font-size: 15px;
+        word-spacing: 1px;
+        margin-left: 38px;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .rupay {
+        margin-left: 110px;
+        margin-top: -180px;
+        color: cornflowerblue;
+        font-size: 60px;
+    }
+    
+    img {
+        margin-left: -15px;
+        margin-top: -101px;
+        margin-right: -15px;
+        font-size: 32px;
+        opacity: 0.2;
+        height: 190px;
+    }
+</style>
+
+<body>
+    <!--card design-->
+    <div class="container">
+        <div class="card-header" onmouseover="this.stop()" onmouseout="this.start()">
+            <span class="card" id="yours" align="right">Yours Bank
+                <span class="card-name" align="left">Cridit card</span>
+            <span class="chip" align="left"><span i class="bi bi-cpu-fill"></span>
+            <ul class="num">5555&nbsp;&nbsp;****&nbsp;&nbsp;****&nbsp;1234</ul>
+            <span class="valid">valid >up-to&nbsp;12/22 </span>
+            <div class="rupay"><span i class="bi bi-currency-rupee"></div></span>
+                <img src="../bannar image/card.jpg">
+                </span>
+            </div>
+        </div>
+        <div class="card-body">
+
+        </div>
+        <div class="card-footer">
+
+        </div>
+    </div>
+</body>
+
+</html>

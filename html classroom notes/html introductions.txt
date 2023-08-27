@@ -1,0 +1,64 @@
+Introduction to HTML
+Sudhakar Sharma
+•
+2 Mar
+What are the various types of Software applications developed by companies?
+1. Desktop Applications
+2. Web Applications
+3. Distributed Applications
+4. AI Applications
+5. Mobile Applications
+6. IoT Applications
+                   
+                                    HTML, CSS, Bootstrap, JavaScript
+- HTML
+- CSS
+- Bootstrap
+- JavaScript
+            "Build Web Applications"
+                a) Front End   [HTML, CSS, Bootstrap, JS]
+                b) Back End   [Server Side Script, Frameworks, Database...]
+
+
+                                          HTML
+- Hyper Text Markup Language
+- Hyper means "Beyond".
+- Hyper text defines some content and take you beyond the content what is displayed.
+- Markup is used for marking up content so that it can be presented exactly as required.
+- Markup Language is a language used for presentations.
+
+FAQ: What is the role of HTML is Web Development?
+Ans : It is used for presentation.
+
+Evolution of HTML:
+- Network started in early 1960's with ARPANET by US-DOD.
+   [Advanced Research Projects Agency Network]
+- Networks
+    a) LAN
+    b) MAN
+    c) WAN
+- CERN Labs developed a language called GML for presentation in Network.
+   [Generic Markup Language]
+- CERN developed SGML  [Standard Generic Markup Language]
+- 1990's "Tim Berners Lee" introduced "Web" and "HTML".
+-  Web is a Protion of Internet.
+-  GML => SGML => HTML
+-  IETF [Internet Engineering Task Force] maintained HTML upto versions 3.1
+- WHATWG [Web Hyper Text Application Technology Work Group] from 2004, took responsibility of HTML and developed HTML 4, HTML 5.
+        https://whatwg.org/
+- Web is mantained and developed by  "W3C" [World Wide Web Consortium]
+        [Tim Berners Lee]
+- Latest version of Web is "Web-3".
+- Latest version of HTML is HTML5.
+
+    HTML                 - WHATWG.org                    Tim Berners Lee
+    JavaScript         - ECMA International, MDN     Brendan Eich
+    Web                 - W3C
+
+Terminology:
+1. Network
+2. Types of Networks
+3. Internet
+4. Web        
+5. Web Server : It resembles both hardware and software, It satisfies the client requests by sending and receving data.
+10 class comments

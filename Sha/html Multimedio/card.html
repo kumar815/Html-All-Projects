@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin-top: 100px;
+        }
+        
+        section {
+            height: 500px;
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            margin-top: -250px;
+        }
+        
+        .card {
+            padding: 5px;
+            box-shadow: 2px 2px 3px gray;
+            background-color: white;
+            height: 400px;
+            margin: 5px;
+        }
+        
+        .card:target {
+            background-color: black;
+            transition: 2s;
+            height: 30px;
+            font-size: large;
+        }
+        
+        .card-header {
+            font-size: 25px;
+            font-family: Arial;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .row {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        
+        .row img {
+            width: 100%;
+        }
+        
+        .row div {
+            margin: 2px;
+        }
+        
+        .card-body {
+            font-family: Arial;
+        }
+        
+        .card-footer {
+            font-size: 15px;
+            color: blue;
+            margin-top: 1 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/AmazonBanner.jpg" width="100%">
+    </header>
+    <section>
+        <div class="card">
+            <div class="card-header">
+                Home appliances | 10% off on select cards
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="../bannar image/aircondishner.JPG">
+                        <p>Air conditioners</p>
+                    </div>
+                    <div>
+                        <img src="../bannar image/reffrigerator.JPG">
+                        <p>Refrigerators</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="../bannar image/microwave.JPG">
+                        <p>Microwaves</p>
+                    </div>
+                    <div>
+                        <img src="../bannar image/washing machine.JPG">
+                        <p>Washing machines</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                See more..
+            </div>
+        </div>
+        <div class="card">
+
+        </div>
+        <div class="card">
+
+        </div>
+        <div class="card">
+
+        </div>
+    </section>
+</body>
+
+</html>

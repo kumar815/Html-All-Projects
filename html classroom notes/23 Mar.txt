@@ -1,0 +1,241 @@
+Links in HTML
+Sudhakar Sharma
+•
+23 Mar
+Images in HTML
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            height: 500px;
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            margin-top: -250px;
+        }
+        .card {
+            padding: 5px;
+            box-shadow: 2px 2px 3px gray;
+            background-color: white;
+            height: 400px;
+            margin: 5px;
+        }
+        .card-header {
+            font-size: 25px;
+            font-family: Arial;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .row {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .row img {
+            width: 100%;
+        }
+        .row div {
+            margin: 2px;
+        }
+        .card-body {
+            font-family: Arial;
+        }
+        .card-footer {
+            font-size: 15px;
+            color:blue;
+            margin-top: 1   0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/AmazonBanner.jpg" width="100%">
+    </header>
+    <section>
+        <div class="card">
+           <div class="card-header">
+              Home appliances | 10% off on select cards
+           </div>
+           <div class="card-body">
+              <div class="row">
+                 <div>
+                    <img src="images/a1.jpg">
+                    <p>Air conditioners</p>
+                 </div>
+                 <div>
+                    <img src="images/a2.jpg">
+                    <p>Refrigerators</p>
+                 </div>
+              </div>
+              <div class="row">
+                 <div>
+                    <img src="images/a3.jpg">
+                    <p>Microwaves</p>
+                 </div>
+                 <div>
+                    <img src="images/a4.jpg">
+                    <p>Washing machines</p>
+                 </div>
+              </div>
+           </div>
+           <div class="card-footer">
+             See more..
+           </div>
+        </div>
+        <div class="card">
+
+        </div>
+        <div class="card">
+
+        </div>
+        <div class="card">
+
+        </div>
+    </section>
+</body>
+</html>
+
+                                      Links in HTML
+                                        [Hyperlinks]
+
+- A link is clickable text, picture or graphic that navigates the user to any specified location within the page or outside the page.
+
+- Hyperlink [hyper=beyond] navigates the user beyond the content.
+
+- A hyperlink is classified into 2 types
+
+
+        1. Intra document link
+        2. Inter document link
+
+Intra Document Link
+- It enables navigation from one location to another within the same page.
+- A hyper link is defined by using HTML anchor element "<a>"
+- To create intra document links
+        a) You have to define an "ID" for the target element
+                <h2  id="ui">
+                <img  id="realme">
+               
+        b) You can navigate to ID by using "href" attribute of <a> anchor element.
+
+                <a href="#ui"> UI </a>
+                <a href="#realme"> Realme </a>
+
+Syntax:    
+            http://127.0.0.1:5500/public/page.html#realme
+
+EX:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intra Document Links</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        header {
+            background-color: black;
+            color:white;
+            padding: 5px;
+        }
+        section {
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+         
+        }
+        main {
+            height: 500px;
+            overflow: auto;
+        }
+        ul {
+            list-style: none;
+            margin-left: -30px;
+        }
+        li {
+            font-size: 20px;
+            border:1px solid black;
+            margin-bottom: 20px;
+            width: 120px;
+            padding: 5px;
+            background-color: black;
+            color:white;
+        }
+        nav a {
+            color:white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 align="center">Online Courses</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#aws">AWS</a></li>
+                <li><a href="#dev">DevOps</a></li>
+                <li><a href="#ui">UI Web</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h2 id="home">Home</h2>
+            <p>We understand that <span>special offer on <a href="#realme">Realme</a> mobiles</span> you may have questions about the Microsoft Services Agreement. We have an FAQ page (https://www.microsoft.com/en-us/servicesagreement/upcoming-faq.aspx) that provides more information, including what Microsoft products and services it covers. Whenever we make changes, we provide a summary of the most notable changes to the current Microsoft Services Agreement. We will also continue to provide a summary of the changes to the previous version, and a link to the previous version, of the Microsoft Services Agreement on the Summary of Changes (https://www.microsoft.com/en-us/servicesagreement/upcoming-updates.aspx) page.</p>
+            <h2 id="aws">AWS Online Training</h2>
+            <div>
+                <a href="#home">Back to Top</a>
+            </div>
+            <img src="images/aws.jpg">
+            <p>We understand that you may have questions about the Microsoft Services Agreement. We have an FAQ page (https://www.microsoft.com/en-us/servicesagreement/upcoming-faq.aspx) that provides more information, including what Microsoft products and services it covers. Whenever we make changes, we provide a summary of the most notable changes to the current Microsoft Services Agreement. We will also continue to provide a summary of the changes to the previous version, and a link to the previous version, of the Microsoft Services Agreement on the Summary of Changes (https://www.microsoft.com/en-us/servicesagreement/upcoming-updates.aspx) page.</p>
+            <h2 id="dev">DevOps Online Training</h2>
+            <img src="images/dev.jpg">
+            <p>We understand that you may have questions about the Microsoft Services Agreement. We have an FAQ page (https://www.microsoft.com/en-us/servicesagreement/upcoming-faq.aspx) that provides more information, including what Microsoft products and services it covers. Whenever we make changes, we provide a summary of the most notable changes to the current Microsoft Services Agreement. We will also continue to provide a summary of the changes to the previous version, and a link to the previous version, of the Microsoft Services Agreement on the Summary of Changes (https://www.microsoft.com/en-us/servicesagreement/upcoming-updates.aspx) page.</p>
+            <figure id="realme">
+                <img src="images/realme.jpg" width="200" height="300">
+                <figcaption>Realme</figcaption>
+            </figure>
+            <h2 id="ui">UI Web Development</h2>
+            <img src="images/ui.jpg">
+            <p>We understand that you may have questions about the Microsoft Services Agreement. We have an FAQ page (https://www.microsoft.com/en-us/servicesagreement/upcoming-faq.aspx) that provides more information, including what Microsoft products and services it covers. Whenever we make changes, we provide a summary of the most notable changes to the current Microsoft Services Agreement. We will also continue to provide a summary of the changes to the previous version, and a link to the previous version, of the Microsoft Services Agreement on the Summary of Changes (https://www.microsoft.com/en-us/servicesagreement/upcoming-updates.aspx) page.</p>
+
+        </main>
+    </section>
+</body>
+</html>
+
+FAQ's
+1. What is difference between "src" and "href" ?
+A.
+    <img src="path">
+    <a  href="path">
+
+    src        : It is a getter - It is accessor in computer programming which is used to get
+              a value. [read a value]
+   
+    href    : It is a setter - It is accessor used to set a value.
+   
+2. Why href is required for <a> ?
+A. <a> navigates to any location by setting a reference in URL. Hence it needs a setter called "href".
+
+3. How to change color for visited link?
+A. <body  vlink="green">
+
+4. How to change color for active link ?
+A.  <body  alink="red">
+
+5. How to remove underline for hyperlink?
+A. by using "text-decoration" style set to "none"
+
+    a {
+        text-decoration:none;
+    }

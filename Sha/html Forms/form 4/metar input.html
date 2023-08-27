@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!--it is used to dispaly Gread metar-->
+    <!--attributes:- min max value low high-->
+    <!--syntax
+    <meter min="1" max="10" value="10">attribute </meter> -->
+    <h3>Ratings and reviews</h3>
+    <ul>
+        <li>
+            <span>5</span><span class="bi bi-star-fill"></span>
+            <meter min="1" max="5" value="5"></meter>
+            <span>5250</span></li>
+        <button>green </button>
+        <li><span>4</span><span class="bi bi-star-fill"></span>
+            <meter min="1" max="4" low="40" high="80" value="100"></meter>
+            <span>1534</span>
+            <button>green high</button>
+        </li>
+        <button>light orange max</button>
+        <li><span>3</span><span class="bi bi-star-fill"></span>
+            <meter min="1" max="100" low="40" high="80" value="100"></meter>
+            <span>634</span>
+        </li>
+        <button>red low</button>
+        <li><span>2</span><span class="bi bi-star-fill"></span>
+            <meter min="1" max="100" low="60" high="90" value="100"></meter>
+            <span>18</span>
+        </li>
+    </ul>
+</body>
+
+</html>

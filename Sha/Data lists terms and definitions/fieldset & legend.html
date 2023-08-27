@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--learn fieldset and legend-->
+<!--<fieldset>,  <legend>-->
+<!-- Fieldset and Legend
+- Fieldset is a container with frame.
+- Legent is a caption for container.
+- Fieldset is used for display various categories of content.
+Syntax:
+    <fieldset>
+           <legend> Title </legend>
+           ........
+           ........
+    </fieldset>
+
+- CSS Shadow
+    a) box-shadow
+    b) text-shadow
+
+Syntax:
+    div {
+        box-shadow: hPixels  vPixes  blurPixels  color;
+      }
+
+    div {
+        box-shadow: 5px 4px 2px gray;
+     }
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fieldset legend</title>
+</head>
+<style>
+    dl {
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+    }
+    
+    dt {
+        background-color: black;
+        color: white;
+        margin-top: 5px;
+    }
+    
+    fieldset {
+        margin-top: 10px;
+        box-shadow: 4px 5px 15px green;
+    }
+    
+    legend {
+        border: 1px solid black;
+        width: 150px;
+        text-align: center;
+        box-shadow: 2px 2px 3px red;
+    }
+</style>
+
+<body>
+    <fieldset>
+        <legend>Personal Details</legend>
+        <dl>
+            <dt>Name</dt>
+            <dd>some name</dd>
+            <dt>Age</dt>
+            <dd>some number</dd>
+            <dt>Date of Birth</dt>
+            <dd>some date</dd>
+        </dl>
+    </fieldset>
+    <fieldset>
+        <legend>Address</legend>
+        <dl>
+            <dt>City</dt>
+            <dd>some name</dd>
+            <dt>State</dt>
+            <dd>some name</dd>
+            <dt>Postal Code</dt>
+            <dd>some code</dd>
+        </dl>
+    </fieldset>
+</body>
+
+</html>

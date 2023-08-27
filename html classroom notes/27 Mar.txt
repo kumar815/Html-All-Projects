@@ -1,0 +1,132 @@
+Textbox Attributes and Regular Expressions
+Sudhakar Sharma
+•
+27 Mar
+HTML Forms
+- Form Element
+        id, name, class, method, action, novalidate
+- TextBox Element
+        id, name, class, value, placeholder
+
+    Attribute                    Description
+    -----------------------------------------------------------------------
+    readonly                    It will not allow to modify the value of textbox but can submit
+                                its value.
+           
+    disabled                    It will not allow to modify and submit.                    
+
+                                <input type="text"  value="John" disabled>
+   
+    autofocus                    It sets focus to the textbox automatically on page load.
+                                [FIFO]
+
+                                <input type="text"  autofocus>
+
+    size                        It defines the width for textbox. The default is 20.
+       
+                                <input type="text" size="4">
+
+    minlength                    It validates the lower bound value of textbox.
+
+    maxlength                It restricts the maximum number of chars.    
+                               
+                                <input type="text" minlength="4" maxlength="10">
+
+    required                    It ensures that the textbox is not empty.
+                                It is used for mandatory fields.
+
+                                <input type="text"  required>
+   
+    list                            It is used to attach a data list to textbox.
+                                <datalist> element is used to configure a list with
+                                <option> as value.
+
+                                Datalist is used as "auto complete" text for input value.
+
+   
+                                <input type="text"  list="terms">
+                                <datalist  id="terms">
+                                <option> Term-1 </option>
+                                <option> Term-2 </option>
+                                </datalist>
+
+     pattern                    It is used to verify the format of input value by matching it
+                                against a "Regular Expression".
+
+Ex:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form method="get">
+        <div align="center">
+            <h1>Google</h1>
+            <input type="text" size="40" name="string" list="terms">
+            <datalist id="terms">
+                <option>JavaScript Tutorial</option>
+                <option>HTML Tutorial</option>
+                <option>JavaScript Projects</option>
+                <option>CSS Projects</option>
+                <option>HTML Examples</option>
+            </datalist>
+            <p>
+                <button>Search</button>
+            </p>
+        </div>
+     </form>
+</body>          
+</html>
+
+                                     Regular Expression
+ - A regular expression is built by using "Meta characters" and "Quantifiers".
+ - A regular expression is used for validating the format of input value.
+
+    Meta Character            Description
+    ------------------------------------------------------------------------------------------
+    ?                            Zero or one occurance of a character.
+
+                                pattern="colou?r"        => color, colour
+
+    +                            One or more occurances of a character.
+
+                                 pattern="colou+r"        => colour, colouur, colouuur
+
+    *                            Zero or more occurances of character.
+
+                                pattern="colou*r"        => color, colour, colouur
+
+    .                            Any single character
+
+                                pattern=".at"                => cat, bat, rat, 1at, $at
+                                pattern=".o."                => cow, toy, dos, 1o4, $o1
+
+    \                            It transforms a character into meta character and vice versa.
+
+                                pattern="gmail\.com"        => gmail.com
+                               
+                                pattern="\(\+91\)"            => (+91)
+   
+    |                            Pipe refers to "OR", you can configure multiple chars or
+                                words sequence.
+
+                                pattern="red|green|blue"    => red, green, blue
+
+    \i                            Ignore case for given string.
+   
+                                pattern="colou?r\i"        => color, Color, COLOR
+                                                            => Colour, COLOUR etc..
+
+    \d                            It refers to single digit numeric value.
+
+                                pattern="\d?\d"            => 1, 3, 6, 44, 22
+                                pattern="\d\d"            => 33, 24, 56, 21
+
+    \D                            It refers to non-numeric chars. All chars other than number.
+
+                                pattern="\D"                => A-Z, a-z, special chars
+                                pattern="\D\d"            => #3, A2

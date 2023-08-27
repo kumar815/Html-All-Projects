@@ -1,0 +1,60 @@
+Setup Environment for Web Applications
+Sudhakar Sharma
+•
+4 Mar
+Setup Environment for Web Applications:
+--------------------------------------------------------
+
+1. Download and Install "Node JS" software on your PC
+    [Package Manager - NPM, Yarn, RubyGems, Bower, NuGet..]
+
+   Note: We are installing "NodeJS" form a package manager called "NPM"
+
+                https://nodejs.org/en/   => download 18x version
+       
+           Check installed version from command prompt.
+
+           C:\> node  -v                 node js version
+           C:\> npm  -v                npm version
+
+2. Download and Install  "Visual Studio Code" editor
+   
+    Note: Editor provides an IDE [Integrated Development Environment] for building,
+           debugging, testing and deploying apps.
+
+           
+3. Install following extentions in Visual Studio Code
+
+                - Live Server    [Ritwick Dey]
+                - vscode-icons  [vscode icon]
+                - IntelliSense for CSS class names in HTML
+
+Create a new Project - Web Application [Static and Dynamic]
+
+1. Create a new folder in your PC for Web Application
+
+            E:\amazon-shopping        [ Physical Path ]
+
+2. Open project folder in "VS Code"
+
+3. Every Project must have  "package.json" , which comprises of project meta data.
+    - Open Terminal in VS Code   [ Ctrl + ` ]
+    - Switch to "Command Prompt"  from  "Power Shell"
+    - Run the following command
+
+                > npm   init   -y
+
+    - It will generate "package.json"
+
+4. Add following folders into project
+   
+        - public        [ comprises of static resources : html, images, documents]
+        - src            [ comprises of dynamic resources: css, sass, less, js, ts...]
+
+5. Every web application must have a startup page, which is "index.html"
+    - Add "index.html" file in root folder of project.
+    - Add some text
+                "Welcome to HTML
+    - Click "Go Live" button in VS Code status bar.
+
+                http://127.0.0.1:5500
